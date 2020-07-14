@@ -16,9 +16,7 @@ function App() {
     <ThemeProvider theme={customTheme}>
       <AppContainer>
         <GlobalStyle />
-        <PageContainer>
-          <Routes />
-        </PageContainer>
+        <Routes />
       </AppContainer>
     </ThemeProvider>
   );
