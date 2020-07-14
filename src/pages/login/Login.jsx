@@ -26,7 +26,6 @@ export default function Login() {
             <TextField
               type='email'
               placeholder='Email'
-              className='input'
               value={email}
               onChange={(event) => setEmail(event.target.value)}
             />
@@ -34,7 +33,6 @@ export default function Login() {
             <TextField
               type='password'
               placeholder='Password'
-              className='input'
               value={password}
               onChange={(event) => setPassword(event.target.value)}
             />
