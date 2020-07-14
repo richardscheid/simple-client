@@ -1,10 +1,16 @@
 import React from 'react';
 import { StyledMain, Div } from './style';
 
-const LayoutContent = (props) => (
-  <StyledMain>
-    <Div {...props} />
-  </StyledMain>
-);
+export class LayoutContent extends React.Component {
+  render() {
+    return (
+      <>
+        <StyledMain>
+          <Div {...this.props} />
+        </StyledMain>
+      </>
+    );
+  }
+}
 
 export default LayoutContent;
