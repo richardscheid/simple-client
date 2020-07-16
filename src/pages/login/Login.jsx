@@ -17,7 +17,7 @@ export default function Login() {
   return (
     <LoginContainer>
       <LoginContent>
-        <Title size='h3'> Login page </Title>
+        <Title size='h3'> Welcome </Title>
 
         <form onSubmit={handleLogin}>
           <TextField
@@ -34,8 +34,8 @@ export default function Login() {
             onChange={(event) => setPassword(event.target.value)}
           />
 
-          <Button label='Sign In' type='submit' primary>
-            Login
+          <Button type='submit' primary>
+            Sign in
           </Button>
         </form>
       </LoginContent>
