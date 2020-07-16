@@ -9,6 +9,9 @@ const customTheme = createTheme({
   palette: {
     primary: theme.palette.cyan,
   },
+  typography: {
+    fontFamily: 'Roboto',
+  },
 });
 
 function App() {
