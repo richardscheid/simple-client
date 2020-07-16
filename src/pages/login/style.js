@@ -22,5 +22,6 @@ export const LoginContent = styled(LoginStyle)`
   width: 350px;
   height: 250px;
   margin: 30px;
+  border-radius: 0.5rem;
   background-color: #f0f0f5;
 `;
