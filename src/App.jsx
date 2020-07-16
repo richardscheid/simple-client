@@ -1,6 +1,6 @@
 import React from 'react';
+import { AppContainer } from './style';
 import { ThemeProvider } from 'styled-components';
-import { AppContainer, PageContainer } from './style';
 import { GlobalStyle, theme, createTheme } from '@involves/violin';
 
 import Routes from './routes';
