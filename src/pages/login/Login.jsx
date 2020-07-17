@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import { LoginContainer, LoginContent, FormContent } from './style';
 import { Button, TextField, Title } from '@involves/violin';
+import { LoginContainer, LoginContent, FormContent } from './style';
 
 export default function Login() {
   const history = useHistory();
