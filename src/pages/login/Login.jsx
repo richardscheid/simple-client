@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import { LoginContainer, LoginContent } from './style';
+import { LoginContainer, LoginContent, FormContent } from './style';
 import { Button, TextField, Title } from '@involves/violin';
 
 export default function Login() {
@@ -19,25 +19,27 @@ export default function Login() {
       <LoginContent>
         <Title size='h3'> Welcome </Title>
 
-        <form onSubmit={handleLogin}>
-          <TextField
-            type='email'
-            placeholder='Email'
-            value={email}
-            onChange={(event) => setEmail(event.target.value)}
-          />
+        <FormContent>
+          <form onSubmit={handleLogin}>
+            <TextField
+              type='email'
+              placeholder='Email'
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
+            />
 
-          <TextField
-            type='password'
-            placeholder='Password'
-            value={password}
-            onChange={(event) => setPassword(event.target.value)}
-          />
+            <TextField
+              type='password'
+              placeholder='Password'
+              value={password}
+              onChange={(event) => setPassword(event.target.value)}
+            />
 
-          <Button type='submit' primary>
-            Sign in
-          </Button>
-        </form>
+            <Button type='submit' primary>
+              Sign in
+            </Button>
+          </form>
+        </FormContent>
       </LoginContent>
     </LoginContainer>
   );
