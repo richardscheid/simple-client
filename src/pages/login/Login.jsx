@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Input from '../../components/Input';
 import { useHistory } from 'react-router-dom';
 import { Button, Title } from '@involves/violin';
-import { LoginContainer, LoginContent, FormContent } from './style';
+import { LoginContainer, LoginContent, FormContent, LoginTitle } from './style';
 
 export default function Login() {
   const history = useHistory();
@@ -18,7 +18,9 @@ export default function Login() {
   return (
     <LoginContainer>
       <LoginContent>
-        <Title size='h3'> Welcome </Title>
+        <LoginTitle>
+          <Title size='h3'> Welcome </Title>
+        </LoginTitle>
 
         <FormContent>
           <form onSubmit={handleLogin}>
