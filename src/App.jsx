@@ -7,7 +7,7 @@ import Routes from './routes';
 
 const customTheme = createTheme({
   palette: {
-    primary: theme.palette.cyan,
+    primary: theme.palette.black,
   },
   typography: {
     fontFamily: 'Roboto',
