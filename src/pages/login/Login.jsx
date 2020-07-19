@@ -2,7 +2,14 @@ import React, { useState } from 'react';
 import Input from '../../components/Input';
 import { useHistory } from 'react-router-dom';
 import { Button, Title } from '@involves/violin';
-import { LoginContainer, LoginContent, FormContent, LoginTitle } from './style';
+import {
+  LoginContainer,
+  LoginContent,
+  FormContent,
+  LoginTitle,
+  ButtonContent,
+  StyledLink,
+} from './style';
 
 export default function Login() {
   const history = useHistory();
@@ -38,9 +45,13 @@ export default function Login() {
               onChange={(event) => setPassword(event.target.value)}
             />
 
-            <Button type='submit' primary>
-              Sign in
-            </Button>
+            <ButtonContent>
+              <StyledLink to='/reset'>Forgot password</StyledLink>
+
+              <Button type='submit' primary>
+                Sign in
+              </Button>
+            </ButtonContent>
           </form>
         </FormContent>
       </LoginContent>
