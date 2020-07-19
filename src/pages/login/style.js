@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import dashboard from '../../assets/dashboard.jpg';
 
 const LoginStyle = styled.div`
@@ -31,4 +32,15 @@ export const LoginTitle = styled.div`
   width: 100%;
   text-align: center;
   margin-bottom: 10px;
+`;
+
+export const ButtonContent = styled.div`
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+`;
+
+export const StyledLink = styled(Link)`
+  color: #1f0e3d;
+  text-decoration: none;
 `;
