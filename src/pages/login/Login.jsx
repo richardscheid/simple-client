@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Input from '../../components/Input';
+import { FiMail } from 'react-icons/fi';
 import { useHistory } from 'react-router-dom';
 import { Button, Title } from '@involves/violin';
 import {
@@ -31,6 +32,7 @@ export default function Login() {
 
         <FormContent>
           <form onSubmit={handleLogin}>
+            <FiMail />
             <Input
               type='email'
               placeholder='Email'
