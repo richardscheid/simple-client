@@ -6,11 +6,11 @@ import { GlobalStyle, theme, createTheme } from '@involves/violin';
 import Routes from './routes';
 
 const customTheme = createTheme({
-  palette: {
-    primary: theme.palette.black,
-  },
   typography: {
     fontFamily: 'Roboto',
+  },
+  palette: {
+    primary: theme.palette.black,
   },
 });
 
