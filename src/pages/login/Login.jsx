@@ -32,7 +32,6 @@ export default function Login() {
 
         <FormContent>
           <form onSubmit={handleLogin}>
-            <FiMail />
             <Input
               type='email'
               placeholder='Email'
