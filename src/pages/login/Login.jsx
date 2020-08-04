@@ -3,12 +3,12 @@ import Input from '../../components/Input';
 import { useHistory } from 'react-router-dom';
 import { Button, Title } from '@involves/violin';
 import {
-  LoginContainer,
-  LoginContent,
-  FormContent,
-  LoginTitle,
-  ButtonContent,
   StyledLink,
+  LoginTitle,
+  FormContent,
+  LoginContent,
+  ButtonContent,
+  LoginContainer,
 } from './style';
 
 export default function Login() {
