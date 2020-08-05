@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Input from '../../components/Input';
+import Authentication from '../../services/auth/authentication';
 import { useHistory } from 'react-router-dom';
 import { Button, Title } from '@involves/violin';
 import {
@@ -18,6 +19,8 @@ export default function Login() {
 
   async function handleLogin(e) {
     e.preventDefault();
+
+    const auth = Authentication.login(email, password);
 
     history.push('/dashboard');
   }
