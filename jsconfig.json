@@ -2,7 +2,7 @@
   "include": ["src/**/*", "public/**/*"],
   "exclude": ["node_modules"],
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
       "@pages/*": ["src/pages/*"],
