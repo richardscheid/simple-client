@@ -20,7 +20,7 @@ export default function Login() {
   async function handleLogin(e) {
     e.preventDefault();
 
-    const auth = Authentication.login(email, password);
+    const auth = Authentication().login(email, password);
 
     history.push('/dashboard');
   }
