@@ -24,9 +24,14 @@ export default function Login() {
 
     setLoading(true);
 
-    const auth = Authentication().login(email, password);
+    try {
+      const auth = Authentication().login(email, password);
 
-    history.push('/dashboard');
+      history.push('/dashboard');
+    } catch (e) {
+      alert(e.message);
+      setLoading(false);
+    }
   }
 
   return (
