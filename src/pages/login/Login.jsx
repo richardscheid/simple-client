@@ -14,11 +14,15 @@ import {
 
 export default function Login() {
   const history = useHistory();
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [loading, setLoading] = useState(false);
 
   async function handleLogin(e) {
     e.preventDefault();
+
+    setLoading(true);
 
     const auth = Authentication().login(email, password);
 
@@ -51,7 +55,7 @@ export default function Login() {
             <ButtonContent>
               <StyledLink to='/reset'>Forgot password</StyledLink>
 
-              <Button type='submit' primary>
+              <Button type='submit' primary disabled={loading}>
                 Sign in
               </Button>
             </ButtonContent>
