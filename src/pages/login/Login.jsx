@@ -27,7 +27,7 @@ export default function Login() {
     try {
       await auth.login(email, password);
 
-      history.push('/dashboard');
+      // history.push('/dashboard');
     } catch (e) {
       alert(e.message);
       setLoading(false);
