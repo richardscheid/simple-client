@@ -1,9 +1,8 @@
 import api from '../api';
 
-const login = async ({ email, password = '' }) => {
+const login = async ({ email = '', password = '' }) => {
   try {
-    console.log(email);
-    const result = await api.get('login', { email, password });
+    const result = await api.post('login', { email, password });
     console.log(result);
 
     return result;
