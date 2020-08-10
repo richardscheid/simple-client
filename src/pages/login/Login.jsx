@@ -30,6 +30,7 @@ export default function Login() {
       // history.push('/dashboard');
     } catch (e) {
       alert(e.message);
+    } finally {
       setLoading(false);
     }
   }
