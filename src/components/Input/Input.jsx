@@ -1,13 +1,12 @@
 import React from 'react';
-import { TextField } from '@involves/violin';
-import { TextFieldContainer } from './style';
+import { TextFieldContainer, StyledInput } from './style';
 
 export class Input extends React.Component {
   render() {
     return (
       <>
         <TextFieldContainer>
-          <TextField {...this.props} />
+          <StyledInput variant='outlined' {...this.props} />
         </TextFieldContainer>
       </>
     );

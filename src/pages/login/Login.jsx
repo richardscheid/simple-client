@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import auth from '../../services/auth';
+import auth from '../../core/auth';
 import Input from '../../components/Input';
 import { useHistory } from 'react-router-dom';
-import { Button, Title } from '@involves/violin';
+import { Button } from '@material-ui/core';
+
 import {
   StyledLink,
   LoginTitle,
@@ -38,7 +39,7 @@ export default function Login() {
     <LoginContainer>
       <LoginContent>
         <LoginTitle>
-          <Title size='h3'> Welcome </Title>
+          <h2 size='h3'> Welcome </h2>
         </LoginTitle>
 
         <FormContent>
@@ -60,7 +61,11 @@ export default function Login() {
             <ButtonContent>
               <StyledLink to='/reset'>Forgot password</StyledLink>
 
-              <Button type='submit' primary disabled={loading}>
+              <Button
+                type='submit'
+                color='primary'
+                variant='contained'
+                disabled={loading}>
                 Sign in
               </Button>
             </ButtonContent>

@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import auth from '../../services/auth';
+import auth from '../../core/auth';
 import Input from '../../components/Input';
 import { useHistory } from 'react-router-dom';
-import { Button, Title } from '@involves/violin';
 import { LoginTitle } from './style';
 
 export default function Login() {
@@ -11,7 +10,7 @@ export default function Login() {
 
   return (
     <LoginTitle>
-      <Title size='h3'> Dashboard </Title>
+      <h3 size='h3'> Dashboard </h3>
     </LoginTitle>
   );
 }
