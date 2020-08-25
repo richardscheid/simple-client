@@ -1,27 +1,21 @@
 import React from 'react';
 import { AppContainer } from './style';
 
-// import { ThemeProvider } from 'styled-components';
-// import { GlobalStyle, theme, createTheme } from '@involves/violin';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import { ThemeProvider } from '@material-ui/core/styles';
 
+import theme from './theme';
 import Routes from './routes';
-
-// const customTheme = createTheme({
-//   typography: {
-//     fontFamily: 'Roboto',
-//   },
-//   palette: {
-//     primary: theme.palette.black,
-//   },
-// });
 
 function App() {
   return (
-    // <ThemeProvider theme={customTheme}>
-    <AppContainer>
-      <Routes />
-    </AppContainer>
-    // </ThemeProvider>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+
+      <AppContainer>
+        <Routes />
+      </AppContainer>
+    </ThemeProvider>
   );
 }
 
