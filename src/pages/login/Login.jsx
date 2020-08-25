@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import auth from '../../core/auth';
-import Input from '../../components/Input';
 import { useHistory } from 'react-router-dom';
-import { Button } from '@material-ui/core';
+
+import auth from '../../core/auth';
+import { Input, Button } from '../../components';
 
 import {
   StyledLink,
@@ -39,21 +39,24 @@ export default function Login() {
     <LoginContainer>
       <LoginContent>
         <LoginTitle>
-          <h2 size='h3'> Welcome </h2>
+          <h1> Simple </h1>
         </LoginTitle>
 
         <FormContent>
           <form onSubmit={handleLogin}>
             <Input
+              autoFocus
+              required
               type='email'
-              placeholder='Email'
+              label='Email'
               value={email}
               onChange={(event) => setEmail(event.target.value)}
             />
 
             <Input
+              required
               type='password'
-              placeholder='Password'
+              label='Password'
               value={password}
               onChange={(event) => setPassword(event.target.value)}
             />

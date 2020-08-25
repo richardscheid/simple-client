@@ -19,7 +19,7 @@ export const LoginContainer = styled(LoginStyle)`
 
 export const LoginContent = styled(LoginStyle)`
   width: 450px;
-  height: 250px;
+  height: 280px;
   border-radius: 0.5rem;
   background-color: #f0f0f5;
 `;
@@ -31,7 +31,6 @@ export const FormContent = styled.div`
 export const LoginTitle = styled.div`
   width: 100%;
   text-align: center;
-  margin-bottom: 10px;
 `;
 
 export const ButtonContent = styled.div`
