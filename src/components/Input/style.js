@@ -1,11 +1,15 @@
 import styled from 'styled-components';
-import TextField from '@material-ui/core/TextField';
+
+import { makeStyles, createStyles } from '@material-ui/core/styles';
 
 export const TextFieldContainer = styled.div`
   margin-bottom: 12px;
 `;
 
-export const StyledInput = styled(TextField)`
-  width: 100%;
-  height: 40px;
-`
+export const TextFieldStyles = makeStyles((theme) =>
+  createStyles({
+    input: {
+      backgroundColor: theme.palette.common.white,
+    },
+  })
+);

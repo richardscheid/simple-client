@@ -1,12 +1,25 @@
 import React from 'react';
-import { TextFieldContainer, StyledInput } from './style';
 
-export class Input extends React.Component {
+import TextField from '@material-ui/core/TextField';
+import { TextFieldContainer, TextFieldStyles } from './style';
+
+function StyledTextField(props) {
+  const classes = TextFieldStyles();
+
+  return <TextField InputProps={{ classes }} {...props} />;
+}
+
+class Input extends React.Component {
   render() {
     return (
       <>
         <TextFieldContainer>
-          <StyledInput variant='outlined' {...this.props} />
+          <StyledTextField
+            fullWidth
+            variant='outlined'
+            autoComplete='off'
+            {...this.props}
+          />
         </TextFieldContainer>
       </>
     );
