@@ -1,8 +1,13 @@
 import axios from 'axios';
 
-const api = axios.create({
-  withCredentials: true,
-  baseURL: 'http://localhost:3030',
-});
+const api = (accessToken) => {
+  return axios.create({
+    baseURL: 'http://localhost:3030',
+    headers: {
+      Accept: 'application/json',
+      Authorization: `Bearer ${accessToken}`,
+    },
+  });
+};
 
-export default api;
+export { api };
