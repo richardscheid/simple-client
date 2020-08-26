@@ -1,10 +1,9 @@
-import { makeStyles, createStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+import { withStyles } from '@material-ui/core/styles';
 
-export const ButtonStyles = makeStyles((theme) =>
-  createStyles({
-    root: {
-      fontWeight: 'bold',
-      textTransform: 'none'
-    },
-  })
-);
+export const StyledButton = withStyles({
+  root: {
+    fontWeight: 'bold',
+    textTransform: 'none',
+  },
+})(Button);
