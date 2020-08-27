@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
 
 import auth from '../../core/auth';
 import { Input, Button } from '../../components';
@@ -19,15 +20,19 @@ export default function Login() {
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
 
+  const dispatch = useDispatch();
+
   async function handleLogin(e) {
     e.preventDefault();
 
     setLoading(true);
 
     try {
-      const result = await auth.login({ email, password });
-      console.log(result);
-      // history.push('/dashboard');
+      const response = await auth.login({ email, password });
+
+      if (response.auth) {
+        localStorage.setItem('token', response.token);
+      }
     } catch (e) {
       alert(e.message);
     } finally {
