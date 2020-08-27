@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
+import { authenticate, unauthenticate } from '../../redux';
 
 import auth from '../../core/auth';
 import { Input, Button } from '../../components';
@@ -32,6 +33,7 @@ export default function Login() {
 
       if (response.auth) {
         localStorage.setItem('token', response.token);
+        dispatch(authenticate(response.token));
       }
     } catch (e) {
       alert(e.message);
