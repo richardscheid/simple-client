@@ -1,12 +1,12 @@
-export const SET_TOKEN = 'SET_TOKEN';
 export const AUTHENTICATE = 'AUTHENTICATE';
 export const UNAUTHENTICATE = 'UNAUTHENTICATE';
 
-export function authenticate() {
+export function authenticate(accessToken) {
   return {
     type: AUTHENTICATE,
     payload: {
       authenticated: true,
+      accessToken: accessToken,
     },
   };
 }
@@ -16,15 +16,7 @@ export function unauthenticate() {
     type: UNAUTHENTICATE,
     payload: {
       authenticated: false,
-    },
-  };
-}
-
-export function setAccessToken(accessToken) {
-  return {
-    type: SET_TOKEN,
-    payload: {
-      accessToken,
+      accessToken: '',
     },
   };
 }
