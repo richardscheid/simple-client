@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { authenticate, unauthenticate } from '../../redux';
 
-import auth from '../../core/auth';
+import auth from '../../core/useAuth';
 import { Input, Button } from '../../components';
 
 import {
