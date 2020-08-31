@@ -2,17 +2,12 @@ import React from 'react';
 
 import { StyledButton } from './style';
 
-class Button extends React.Component {
-  render() {
-    return (
-      <>
-          <StyledButton
-            variant='contained'
-            {...this.props}
-          />
-      </>
-    );
-  }
-}
+const Button = (props) => {
+  return (
+    <>
+      <StyledButton variant='contained' {...props} />
+    </>
+  );
+};
 
-export default Button;
+export { Button };
