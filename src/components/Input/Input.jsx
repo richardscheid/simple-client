@@ -11,16 +11,14 @@ function StyledTextField(props) {
 
 const Input = (props) => {
   return (
-    <>
-      <TextFieldContainer>
-        <StyledTextField
-          fullWidth
-          variant='outlined'
-          autoComplete='off'
-          {...props}
-        />
-      </TextFieldContainer>
-    </>
+    <TextFieldContainer>
+      <StyledTextField
+        fullWidth
+        variant='outlined'
+        autoComplete='off'
+        {...props}
+      />
+    </TextFieldContainer>
   );
 };
 
