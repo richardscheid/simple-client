@@ -9,21 +9,19 @@ function StyledTextField(props) {
   return <TextField InputProps={{ classes }} {...props} />;
 }
 
-class Input extends React.Component {
-  render() {
-    return (
-      <>
-        <TextFieldContainer>
-          <StyledTextField
-            fullWidth
-            variant='outlined'
-            autoComplete='off'
-            {...this.props}
-          />
-        </TextFieldContainer>
-      </>
-    );
-  }
-}
+const Input = (props) => {
+  return (
+    <>
+      <TextFieldContainer>
+        <StyledTextField
+          fullWidth
+          variant='outlined'
+          autoComplete='off'
+          {...props}
+        />
+      </TextFieldContainer>
+    </>
+  );
+};
 
-export default Input;
+export { Input };
