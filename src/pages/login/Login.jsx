@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { authenticate, unauthenticate } from '../../redux';
 
-import auth from '../../core/useAuth';
+import useAuth from '../../core/auth/useAuth';
 import { Input, Button } from '../../components';
 
 import {
@@ -29,7 +29,7 @@ export default function Login() {
     setLoading(true);
 
     try {
-      const response = await auth.login({ email, password });
+      const response = await useAuth.login({ email, password });
 
       if (response.auth) {
         localStorage.setItem('token', response.token);
