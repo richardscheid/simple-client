@@ -1,11 +1,11 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import { HomePage } from '../../../pages';
+import { Dashboard } from '../../../pages';
 
-const PrivateRoutes = (props) => (
+const PrivateRoutes = () => (
   <Switch>
-    <Route path='/'>
-      <HomePage />
+    <Route exact path='/dashboard'>
+      <Dashboard />
     </Route>
   </Switch>
 );
