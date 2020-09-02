@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { authenticate } from '../../redux';
 import { useHistory } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
-import { authenticate, unauthenticate } from '../../redux';
 
-import useAuth from '../../core/auth/useAuth';
+import auth from '../../core/auth';
 import { Input, Button } from '../../components';
 
 import {
@@ -15,7 +15,7 @@ import {
   LoginContainer,
 } from './style';
 
-export default function Login() {
+const Login = () => {
   const history = useHistory();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -29,7 +29,7 @@ export default function Login() {
     setLoading(true);
 
     try {
-      const response = await useAuth.login({ email, password });
+      const response = await auth.login({ email, password });
 
       if (response.auth) {
         localStorage.setItem('token', response.token);
@@ -84,4 +84,6 @@ export default function Login() {
       </LoginContent>
     </LoginContainer>
   );
-}
+};
+
+export { Login };

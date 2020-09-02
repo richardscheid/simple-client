@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { LoginTitle } from './style';
 
-export default function Login() {
+const Dashboard = () => {
   const history = useHistory();
   const [loading, setLoading] = useState(false);
 
@@ -11,4 +11,6 @@ export default function Login() {
       <h3 size='h3'> Dashboard </h3>
     </LoginTitle>
   );
-}
+};
+
+export { Dashboard };
