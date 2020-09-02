@@ -1,11 +1,14 @@
 import React from 'react';
-import { AppContainer } from './style';
+import { BrowserRouter } from 'react-router-dom';
 
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider } from '@material-ui/core/styles';
 
 import theme from './theme';
-import Routes from './routes';
+import { Auth } from './core/auth/authentication';
+import { Routes } from './core/routes';
+
+import { AppContainer } from './style';
 
 function App() {
   return (
@@ -13,7 +16,11 @@ function App() {
       <CssBaseline />
 
       <AppContainer>
-        <Routes />
+        <BrowserRouter>
+          <Auth>
+            <Routes />
+          </Auth>
+        </BrowserRouter>
       </AppContainer>
     </ThemeProvider>
   );
