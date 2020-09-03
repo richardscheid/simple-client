@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const api = (accessToken) => {
+const secure = (accessToken) => {
   return axios.create({
     baseURL: 'http://localhost:3030',
     headers: {
@@ -10,4 +10,8 @@ const api = (accessToken) => {
   });
 };
 
-export { api };
+const api = axios.create({
+  baseURL: 'http://localhost:3030',
+});
+
+export { secure, api };
