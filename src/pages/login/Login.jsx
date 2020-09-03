@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { authenticate } from '../../redux';
 import { useHistory } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
 import auth from '../../core/auth';
+import { authenticate } from '../../redux';
 import { Input, Button } from '../../components';
 
 import {
@@ -34,9 +34,10 @@ const Login = () => {
       if (response.auth) {
         localStorage.setItem('token', response.token);
         dispatch(authenticate(response.token));
+        history.push('/dashboard');
       }
-    } catch (e) {
-      alert(e.message);
+    } catch (error) {
+      console.log(error.message);
     } finally {
       setLoading(false);
     }
@@ -54,28 +55,29 @@ const Login = () => {
             <Input
               autoFocus
               required
-              type='email'
-              label='Email'
+              type="email"
+              label="Email"
               value={email}
               onChange={(event) => setEmail(event.target.value)}
             />
 
             <Input
               required
-              type='password'
-              label='Password'
+              type="password"
+              label="Password"
               value={password}
               onChange={(event) => setPassword(event.target.value)}
             />
 
             <ButtonContent>
-              <StyledLink to='/reset'>Forgot password</StyledLink>
+              <StyledLink to="/reset">Forgot password</StyledLink>
 
               <Button
-                type='submit'
-                color='primary'
-                variant='contained'
-                disabled={loading}>
+                type="submit"
+                color="primary"
+                variant="contained"
+                disabled={loading}
+              >
                 Sign in
               </Button>
             </ButtonContent>
