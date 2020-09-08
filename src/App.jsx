@@ -1,14 +1,13 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-
-import CssBaseline from '@material-ui/core/CssBaseline';
+import { CssBaseline } from '@material-ui/core';
 import { ThemeProvider } from '@material-ui/core/styles';
 
-import theme from './theme';
-import { Auth } from './core/auth/authentication';
+import { Auth } from './core/auth';
 import { Routes } from './core/routes';
-
 import { AppContainer } from './style';
+
+import theme from './theme';
 
 function App() {
   return (
