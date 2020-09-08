@@ -26,5 +26,6 @@ module.exports = {
     'no-console': ['warn', { allow: ['tron'] }],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
+    'no-underscore-dangle': 'off',
   },
 };
