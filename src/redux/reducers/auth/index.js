@@ -1,2 +1,2 @@
-export { authenticate, unauthenticate } from './auth-actions';
 export { initialState, reducer } from './auth-reducer';
+export { authenticate, unauthenticate, setToken } from './auth-actions';

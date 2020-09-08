@@ -1,7 +1,7 @@
-import { AUTHENTICATE, UNAUTHENTICATE } from './auth-actions';
+import { AUTHENTICATE, UNAUTHENTICATE, SET_TOKEN } from './auth-actions';
 
 export const initialState = {
-  accessToken: '',
+  token: '',
   authenticated: false,
 };
 
@@ -11,7 +11,6 @@ export const reducer = (state = initialState, action) => {
       return {
         ...state,
         authenticated: action.payload.authenticated,
-        accessToken: action.payload.accessToken,
       };
     }
 
@@ -19,7 +18,13 @@ export const reducer = (state = initialState, action) => {
       return {
         ...state,
         authenticated: action.payload.authenticated,
-        accessToken: action.payload.accessToken,
+      };
+    }
+
+    case SET_TOKEN: {
+      return {
+        ...state,
+        token: action.payload.token,
       };
     }
 
