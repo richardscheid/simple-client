@@ -4,5 +4,4 @@ export {
   initialState,
   authenticate,
   unauthenticate,
-  setToken,
 } from './reducers';

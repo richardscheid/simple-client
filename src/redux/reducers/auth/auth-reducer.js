@@ -1,4 +1,4 @@
-import { AUTHENTICATE, UNAUTHENTICATE, SET_TOKEN } from './auth-actions';
+import { AUTHENTICATE, UNAUTHENTICATE } from './auth-actions';
 
 export const initialState = {
   token: '',
@@ -10,6 +10,7 @@ export const reducer = (state = initialState, action) => {
     case AUTHENTICATE: {
       return {
         ...state,
+        token: action.payload.token,
         authenticated: action.payload.authenticated,
       };
     }
@@ -17,14 +18,8 @@ export const reducer = (state = initialState, action) => {
     case UNAUTHENTICATE: {
       return {
         ...state,
-        authenticated: action.payload.authenticated,
-      };
-    }
-
-    case SET_TOKEN: {
-      return {
-        ...state,
         token: action.payload.token,
+        authenticated: action.payload.authenticated,
       };
     }
 

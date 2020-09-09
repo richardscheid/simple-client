@@ -4,7 +4,6 @@ import {
   reducer as auth,
   authenticate,
   unauthenticate,
-  setToken,
 } from './auth';
 
 const combinedReducers = combineReducers({
@@ -17,10 +16,4 @@ const initialState = {
   },
 };
 
-export {
-  combinedReducers,
-  initialState,
-  authenticate,
-  unauthenticate,
-  setToken,
-};
+export { combinedReducers, initialState, authenticate, unauthenticate };
