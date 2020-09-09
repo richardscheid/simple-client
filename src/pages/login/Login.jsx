@@ -26,20 +26,20 @@ const Login = () => {
   async function handleLogin(e) {
     e.preventDefault();
 
+    let response;
     setLoading(true);
 
     try {
-      const response = await auth.login({ email, password });
-
-      if (response.auth) {
-        localStorage.setItem('token', response.token);
-        dispatch(authenticate(response.token));
-        history.push('/dashboard');
-      }
+      response = await auth.login({ email, password });
     } catch (error) {
       console.log(error.message);
     } finally {
       setLoading(false);
+    }
+
+    if (response.auth) {
+      dispatch(authenticate(response.token));
+      history.push('/dashboard');
     }
   }
 
