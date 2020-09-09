@@ -4,7 +4,7 @@ import { Dashboard } from '../../../pages';
 
 const PrivateRoutes = () => (
   <Switch>
-    <Route exact path="/">
+    <Route path="/dashboard">
       <Dashboard />
     </Route>
   </Switch>
