@@ -5,14 +5,12 @@ import { useHistory } from 'react-router-dom';
 import { authenticate, unauthenticate } from '../../../redux';
 // import { validateToken } from '../validateToken';
 
-const TOKEN_KEY = 'token';
-const { localStorage } = window;
-
 const Auth = ({ children }) => {
   const mounted = useRef(false);
   const dispatch = useDispatch();
   const history = useHistory();
-  const accessToken = useSelector((state) => state.auth.accessToken);
+
+  const token = useSelector((state) => state.auth.token);
   const authenticated = useSelector((state) => state.auth.authenticated);
 
   useEffect(() => {
@@ -22,25 +20,25 @@ const Auth = ({ children }) => {
     };
   });
 
-  // useEffect(() => {
-  //   const checkAuthentication = async () => {
-  //     const tokenValid = true;
+  useEffect(() => {
+    const checkAuthentication = async () => {
+      if (mounted.current && token) {
+        const tokenValid = true;
 
-  //     if (tokenValid) {
-  //       localStorage.setItem(TOKEN_KEY, accessToken);
-  //       mounted.current && dispatch(authenticate(accessToken));
-  //     } else {
-  //       localStorage.removeItem(TOKEN_KEY);
-  //       mounted.current && dispatch(unauthenticate());
-  //     }
-  //   };
+        if (tokenValid) {
+          dispatch(authenticate(token));
+        } else {
+          dispatch(unauthenticate());
+        }
+      }
+    };
 
-  //   checkAuthentication();
-  // }, [accessToken, dispatch]);
+    checkAuthentication();
+  });
 
   useEffect(() => {
-    if (mounted.current && !!authenticated) {
-      history.push('/');
+    if (mounted.current && !authenticated) {
+      history.push('/login');
     }
   }, [authenticated, history]);
 
