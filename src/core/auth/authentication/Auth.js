@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { authenticate, unauthenticate } from '../../../redux';
-// import { validateToken } from '../validateToken';
+import { validateToken } from '../validateToken';
 
 const Auth = ({ children }) => {
   const mounted = useRef(false);
@@ -23,12 +23,13 @@ const Auth = ({ children }) => {
   useEffect(() => {
     const checkAuthentication = async () => {
       if (mounted.current && token) {
-        const tokenValid = true;
+        const tokenValid = validateToken(token);
 
         if (tokenValid) {
           dispatch(authenticate(token));
         } else {
           dispatch(unauthenticate());
+          history.push('/login');
         }
       }
     };

@@ -1,4 +1,4 @@
-import auth from './auth';
+import useAuth from './useAuth';
 
-export default auth;
+export default useAuth;
 export { Auth } from './authentication';
