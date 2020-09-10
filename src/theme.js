@@ -7,11 +7,11 @@ const theme = createMuiTheme({
     primary: blue,
     error: {
       main: red.A400,
-    }
+    },
   },
   typography: {
     fontFamily: 'Roboto',
-  }
+  },
 });
 
 export default theme;
