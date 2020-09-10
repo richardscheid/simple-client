@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
-import auth from '../../core/auth';
+import useAuth from '../../core/auth';
 import { authenticate } from '../../redux';
 import { Input, Button } from '../../components';
 
@@ -30,7 +30,7 @@ const Login = () => {
     setLoading(true);
 
     try {
-      response = await auth.login({ email, password });
+      response = await useAuth.login({ email, password });
     } catch (error) {
       console.log(error.message);
     } finally {
