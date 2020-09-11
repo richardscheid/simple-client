@@ -26,16 +26,11 @@ const Login = () => {
   async function handleLogin(e) {
     e.preventDefault();
 
-    let response;
     setLoading(true);
 
-    try {
-      response = await useAuth.login({ email, password });
-    } catch (error) {
-      console.log(error.message);
-    } finally {
-      setLoading(false);
-    }
+    const response = await useAuth.login({ email, password });
+
+    setLoading(false);
 
     if (response.auth) {
       dispatch(authenticate(response.token));
