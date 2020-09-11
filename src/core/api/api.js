@@ -1,11 +1,11 @@
 import axios from 'axios';
 
-const secure = (accessToken) => {
+const secure = (token) => {
   return axios.create({
     baseURL: 'http://localhost:3030',
     headers: {
       Accept: 'application/json',
-      Authorization: `Bearer ${accessToken}`,
+      Authorization: `Bearer ${token}`,
     },
   });
 };
