@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
-import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-import { authenticate, unauthenticate } from '../../../redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { validateToken } from '../validateToken';
+import { authenticate, unauthenticate } from '../../../redux';
 
 const Auth = ({ children }) => {
   const mounted = useRef(false);
@@ -23,8 +23,8 @@ const Auth = ({ children }) => {
   useEffect(() => {
     const checkAuthentication = async () => {
       if (mounted.current && token) {
-        const tokenValid = validateToken(token);
-
+        const tokenValid = await validateToken(token);
+        console.log(tokenValid);
         if (tokenValid) {
           dispatch(authenticate(token));
         } else {
