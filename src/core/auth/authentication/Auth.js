@@ -24,7 +24,7 @@ const Auth = ({ children }) => {
     const checkAuthentication = async () => {
       if (mounted.current && token) {
         const tokenValid = await validateToken(token);
-        console.log(tokenValid);
+
         if (tokenValid) {
           dispatch(authenticate(token));
         } else {
