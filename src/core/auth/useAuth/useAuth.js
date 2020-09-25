@@ -1,8 +1,12 @@
 import { api } from '../../api';
 
 const login = async ({ email = '', password = '' }) => {
-  const response = await api.post('login', { email, password });
-  return response?.data;
+  try {
+    const response = await api.post('login', { email, password });
+    return response?.data;
+  } catch (err) {
+    return err.response.data;
+  }
 };
 
 export default { login };
