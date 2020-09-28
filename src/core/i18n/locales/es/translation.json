@@ -1,0 +1,13 @@
+{
+  "header": {
+    "title": "Simple"
+  },
+  "login": {
+    "signin": "Iniciar"
+  },
+  "terms": {
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "forgot": "Olvidé la contraseña"
+  }
+}
