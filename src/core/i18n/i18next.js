@@ -1,29 +1,46 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
 
-i18n.use(initReactI18next).init({
-  resources: {
-    pt: {
-      translation: {
-        header: {
-          title: 'Simple',
+i18n
+  .use(LanguageDetector)
+  .use(initReactI18next)
+  .init({
+    resources: {
+      pt: {
+        translation: {
+          header: {
+            title: 'Simple',
+          },
+          login: {
+            signin: 'Entrar',
+          },
+          terms: {
+            email: 'E-mail',
+            password: 'Senha',
+            forgot: 'Esqueci a senha',
+          },
         },
-        login: {
-          signin: 'Sign In',
-        },
-        terms: {
-          email: 'E-mail',
-          password: 'Password',
-          forgot: 'Forgot password',
+      },
+      en: {
+        translation: {
+          header: {
+            title: 'Simple',
+          },
+          login: {
+            signin: 'Sign In',
+          },
+          terms: {
+            email: 'E-mail',
+            password: 'Password',
+            forgot: 'Forgot password',
+          },
         },
       },
     },
-  },
-  lng: 'pt',
-  fallbackLng: 'pt',
-  interpolation: {
-    escapeValue: false,
-  },
-});
+    interpolation: {
+      escapeValue: false,
+    },
+  });
 
 export default i18n;
