@@ -18,7 +18,7 @@ export const LoginContainer = styled(LoginStyle)`
 `;
 
 export const LoginContent = styled(LoginStyle)`
-  width: 450px;
+  width: 430px;
   height: 280px;
   border-radius: 0.5rem;
   background-color: #f0f0f5;
