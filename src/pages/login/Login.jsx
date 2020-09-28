@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 import useAuth from '../../core/auth';
 import { authenticate } from '../../redux';
@@ -17,6 +18,8 @@ import {
 
 const Login = () => {
   const history = useHistory();
+  const { t } = useTranslation();
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
@@ -42,7 +45,7 @@ const Login = () => {
     <LoginContainer>
       <LoginContent>
         <LoginTitle>
-          <h1> Simple </h1>
+          <h1> {t('header.title')} </h1>
         </LoginTitle>
 
         <FormContent>
@@ -51,7 +54,7 @@ const Login = () => {
               autoFocus
               required
               type="email"
-              label="Email"
+              label={t('terms.email')}
               value={email}
               onChange={(event) => setEmail(event.target.value)}
             />
@@ -59,13 +62,13 @@ const Login = () => {
             <Input
               required
               type="password"
-              label="Password"
+              label={t('terms.password')}
               value={password}
               onChange={(event) => setPassword(event.target.value)}
             />
 
             <ButtonContent>
-              <StyledLink to="/reset">Forgot password</StyledLink>
+              <StyledLink to="/reset">{t('terms.forgot')}</StyledLink>
 
               <Button
                 type="submit"
@@ -73,7 +76,7 @@ const Login = () => {
                 variant="contained"
                 disabled={loading}
               >
-                Sign in
+                {t('login.signin')}
               </Button>
             </ButtonContent>
           </form>
