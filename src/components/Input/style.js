@@ -1,12 +1,5 @@
-import styled from 'styled-components';
-
-import { withStyles, createStyles, fade } from '@material-ui/core/styles';
-
 import InputBase from '@material-ui/core/InputBase';
-
-export const TextFieldContainer = styled.div`
-  margin-bottom: 12px;
-`;
+import { withStyles, createStyles, fade } from '@material-ui/core/styles';
 
 export const TextField = withStyles((theme) =>
   createStyles({
@@ -20,7 +13,7 @@ export const TextField = withStyles((theme) =>
       position: 'relative',
       backgroundColor: theme.palette.common.white,
       border: '1px solid #ced4da',
-      fontSize: 16,
+      fontSize: 15,
       padding: '10px 12px',
       transition: theme.transitions.create(['border-color', 'box-shadow']),
       '&:focus': {
