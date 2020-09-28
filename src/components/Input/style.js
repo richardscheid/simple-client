@@ -1,4 +1,6 @@
 import InputBase from '@material-ui/core/InputBase';
+import InputLabel from '@material-ui/core/InputLabel';
+
 import { withStyles, createStyles, fade } from '@material-ui/core/styles';
 
 export const TextField = withStyles((theme) =>
@@ -9,7 +11,7 @@ export const TextField = withStyles((theme) =>
       },
     },
     input: {
-      borderRadius: 4,
+      borderRadius: 5,
       position: 'relative',
       backgroundColor: theme.palette.common.white,
       border: '1px solid #ced4da',
@@ -23,3 +25,9 @@ export const TextField = withStyles((theme) =>
     },
   })
 )(InputBase);
+
+export const TextLabel = withStyles({
+  root: {
+    fontSize: 18,
+  },
+})(InputLabel);
