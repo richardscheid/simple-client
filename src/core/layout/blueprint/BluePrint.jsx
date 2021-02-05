@@ -7,6 +7,15 @@ const BluePrint = (props) => {
   return (
     <>
       <div>Header</div>
+
+      <div>
+        Sidebar
+        <div>
+          <div>{children}</div>
+
+          <div> Footer </div>
+        </div>
+      </div>
     </>
   );
 };
