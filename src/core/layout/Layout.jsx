@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const BluePrint = (props) => {
+const Layout = (props) => {
   const { children } = props;
 
   return (
@@ -20,12 +20,12 @@ const BluePrint = (props) => {
   );
 };
 
-BluePrint.propTypes = {
+Layout.propTypes = {
   children: PropTypes.node,
 };
 
-BluePrint.defaultProps = {
+Layout.defaultProps = {
   children: PropTypes.node,
 };
 
-export { BluePrint };
+export { Layout };
