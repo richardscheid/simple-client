@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Header } from './components';
+import { Header, Sidebar } from './components';
 
 const Layout = (props) => {
   const { children } = props;
@@ -11,7 +11,7 @@ const Layout = (props) => {
       <Header />
 
       <div>
-        Sidebar
+        <Sidebar />
         <div>
           <div>{children}</div>
 
