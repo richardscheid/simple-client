@@ -8,7 +8,7 @@ const Dashboard = () => {
 
   return (
     <LoginTitle>
-      <h3 size='h3'> Dashboard </h3>
+      <h3 size="h3"> Dashboard </h3>
     </LoginTitle>
   );
 };
