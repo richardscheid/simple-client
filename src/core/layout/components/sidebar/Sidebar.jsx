@@ -6,7 +6,7 @@ const Sidebar = (props) => {
     <>
       <Hidden lgUp>
         <Drawer anchor="left" variant="temporary" elevation={4}>
-          Header
+          Sidebar Header
         </Drawer>
       </Hidden>
       <Hidden lgDown>
