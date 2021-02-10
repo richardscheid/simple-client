@@ -10,7 +10,7 @@ const Sidebar = (props) => {
         </Drawer>
       </Hidden>
       <Hidden lgDown>
-        <Paper>Content</Paper>
+        <Paper>Sidebar Content</Paper>
       </Hidden>
     </>
   );
