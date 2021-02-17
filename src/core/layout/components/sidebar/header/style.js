@@ -1,11 +1,16 @@
 import { Box, IconButton as CoreIconButton } from '@material-ui/core';
 import { withStyles } from '@material-ui/styles';
+import { rgba } from 'polished';
 import styled from 'styled-components';
 
 export const IconButton = withStyles({
   root: {
-    width: 16,
-    height: 16,
+    padding: 16 / 3,
+    color: '#fff',
+    background: rgba(255, 255, 255, 0.09),
+    hover: {
+      background: rgba(255, 255, 255, 0.14),
+    },
   },
 })(CoreIconButton);
 
@@ -23,4 +28,9 @@ export const SidebarHeaderContent = styled.div`
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
+`;
+
+export const Image = styled.img`
+  height: 32px;
+  width: 32px;
 `;
