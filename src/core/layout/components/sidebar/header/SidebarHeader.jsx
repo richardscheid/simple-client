@@ -3,18 +3,20 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import logo from '../../../../../assets/images/react.svg';
-import { StyledIconButton } from './style';
+import { StyledIconButton, StyledSidebarHeader } from './style';
 
 const SidebarHeader = (props) => {
   return (
     <>
-      <Box>
-        <Link to="/dashboard">
-          <StyledIconButton color="primary" size="small">
-            <img src={logo} alt="Project logo" />
-          </StyledIconButton>
-        </Link>
-      </Box>
+      <StyledSidebarHeader>
+        <Box>
+          <Link to="/dashboard">
+            <StyledIconButton color="primary" size="small">
+              <img src={logo} alt="Project logo" />
+            </StyledIconButton>
+          </Link>
+        </Box>
+      </StyledSidebarHeader>
     </>
   );
 };
