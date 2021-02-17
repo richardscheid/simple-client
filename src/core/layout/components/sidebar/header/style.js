@@ -1,15 +1,22 @@
 import styled from 'styled-components';
-import { IconButton } from '@material-ui/core';
+import { Box, IconButton as CoreIconButton } from '@material-ui/core';
 import { withStyles } from '@material-ui/styles';
 
-export const StyledIconButton = withStyles({
+export const IconButton = withStyles({
   root: {
     width: 16,
     height: 16,
   },
-})(IconButton);
+})(CoreIconButton);
 
-export const StyledSidebarHeader = styled.div`
+export const BoxHeader = withStyles({
+  root: {
+    display: 'flex',
+    alignItems: 'center',
+  },
+})(Box);
+
+export const SidebarHeaderContent = styled.div`
   height: 32px;
   width: 32px;
   display: flex;
