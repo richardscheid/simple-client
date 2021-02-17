@@ -2,7 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import logo from '../../../../../assets/images/react.svg';
-import { IconButton, BoxHeader, SidebarHeaderContent, Image } from './style';
+import {
+  IconButton,
+  BoxHeader,
+  BoxTitle,
+  SidebarHeaderContent,
+  Image,
+} from './style';
 
 const SidebarHeader = (props) => {
   return (
@@ -14,6 +20,7 @@ const SidebarHeader = (props) => {
               <Image src={logo} alt="Project logo" />
             </IconButton>
           </Link>
+          <BoxTitle>Simple</BoxTitle>
         </BoxHeader>
       </SidebarHeaderContent>
     </>
