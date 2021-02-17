@@ -1,22 +1,21 @@
-import { Box } from '@material-ui/core';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 import logo from '../../../../../assets/images/react.svg';
-import { StyledIconButton, StyledSidebarHeader } from './style';
+import { IconButton, BoxHeader, SidebarHeaderContent } from './style';
 
 const SidebarHeader = (props) => {
   return (
     <>
-      <StyledSidebarHeader>
-        <Box>
+      <SidebarHeaderContent>
+        <BoxHeader>
           <Link to="/dashboard">
-            <StyledIconButton color="primary" size="small">
+            <IconButton color="primary" size="small">
               <img src={logo} alt="Project logo" />
-            </StyledIconButton>
+            </IconButton>
           </Link>
-        </Box>
-      </StyledSidebarHeader>
+        </BoxHeader>
+      </SidebarHeaderContent>
     </>
   );
 };
