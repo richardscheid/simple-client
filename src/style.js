@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 export const AppContainer = styled.div`
   width: 100%;
@@ -14,5 +14,14 @@ export const PageContainer = styled.div`
   padding: 87px 16px 16px;
   @media (min-width: 500px) {
     padding: 87px 4% 100px;
+  }
+`;
+
+export const GlobalStyles = createGlobalStyle`
+  :root {
+    --spacer: 1rem;
+    --font-size: 16px;
+    --header-height: 78px;
+    --sidebar-width: 270px;
   }
 `;
