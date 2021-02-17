@@ -1,6 +1,6 @@
-import styled from 'styled-components';
 import { Box, IconButton as CoreIconButton } from '@material-ui/core';
 import { withStyles } from '@material-ui/styles';
+import styled from 'styled-components';
 
 export const IconButton = withStyles({
   root: {
