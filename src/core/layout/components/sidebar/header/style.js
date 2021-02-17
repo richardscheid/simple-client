@@ -21,6 +21,15 @@ export const BoxHeader = withStyles({
   },
 })(Box);
 
+export const BoxTitle = withStyles({
+  root: {
+    paddingLeft: 16 / 2,
+    fontSize: 16 * 1.1,
+    fontWeight: 'bold',
+    width: 'auto',
+  },
+})(Box);
+
 export const SidebarHeaderContent = styled.div`
   height: 32px;
   width: 32px;
