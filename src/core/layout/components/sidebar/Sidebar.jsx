@@ -1,9 +1,11 @@
 import React from 'react';
-import { Hidden, Paper } from '@material-ui/core';
-import { SidebarWrapper } from './style';
+import { Hidden } from '@material-ui/core';
+import { SidebarWrapper, SidebarPaper } from './style';
 import { SidebarHeader } from './header';
 
 const Sidebar = (props) => {
+  const { sidebarFixed, sidebarShadow } = props;
+
   return (
     <>
       {/* <Hidden lgUp> */}
@@ -12,9 +14,9 @@ const Sidebar = (props) => {
       </SidebarWrapper>
       {/* </Hidden> */}
       <Hidden lgDown>
-        <Paper square>
-          <SidebarHeader />
-        </Paper>
+        <SidebarPaper square elevation={sidebarShadow ? 11 : 3}>
+          <SidebarHeader fixed={sidebarFixed} />
+        </SidebarPaper>
       </Hidden>
     </>
   );
