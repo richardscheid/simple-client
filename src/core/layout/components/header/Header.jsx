@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { AppBar, Box, Hidden } from '@material-ui/core';
+import { Box, Hidden } from '@material-ui/core';
+import { AppBar } from './style';
 
 const Header = (props) => {
   const toggleSidebarMobile = () =>
