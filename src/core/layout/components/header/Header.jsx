@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { AppBar, Box, Hidden } from '@material-ui/core';
 
 const Header = (props) => {
@@ -22,6 +23,18 @@ const Header = (props) => {
       </AppBar>
     </>
   );
+};
+
+Header.propTypes = {
+  headerFixed: PropTypes.bool,
+  headerShadow: PropTypes.bool,
+  sidebarToggleMobile: PropTypes.bool,
+};
+
+Header.defaultProps = {
+  headerFixed: true,
+  headerShadow: false,
+  sidebarToggleMobile: false,
 };
 
 export { Header };
