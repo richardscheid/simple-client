@@ -1,18 +1,20 @@
 import React from 'react';
 import { Hidden, Paper } from '@material-ui/core';
-import { SidebarHeader } from './header';
 import { SidebarWrapper } from './style';
+import { SidebarHeader } from './header';
 
 const Sidebar = (props) => {
   return (
     <>
-      <Hidden lgUp>
-        <SidebarWrapper open anchor="left" variant="permanent" elevation={16}>
-          <SidebarHeader />
-        </SidebarWrapper>
-      </Hidden>
+      {/* <Hidden lgUp> */}
+      <SidebarWrapper open anchor="left" variant="permanent" elevation={16}>
+        <SidebarHeader />
+      </SidebarWrapper>
+      {/* </Hidden> */}
       <Hidden lgDown>
-        <Paper>Sidebar Content</Paper>
+        <Paper square>
+          <SidebarHeader />
+        </Paper>
       </Hidden>
     </>
   );
