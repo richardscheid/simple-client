@@ -3,11 +3,11 @@ import { Drawer } from '@material-ui/core';
 
 export const SidebarWrapper = withStyles({
   root: {
-    minHeight: 100,
-    overflowY: 'auto',
-    display: 'flex',
-    flexDirection: 'column',
+    width: 270,
+    minHeight: '100%',
     paddingTop: 0,
-    width: 100,
+    display: 'flex',
+    overflowY: 'auto',
+    flexDirection: 'column',
   },
 })(Drawer);
