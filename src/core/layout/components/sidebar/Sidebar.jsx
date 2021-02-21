@@ -11,22 +11,22 @@ const Sidebar = (props) => {
 
   return (
     <>
-      {/* <Hidden lgUp> */}
-      <SidebarWrapper
-        open={sidebarToggleMobile}
-        anchor="left"
-        variant="temporary"
-        elevation={4}
-        onClose={closeDrawer}
-      >
-        <SidebarHeader />
-      </SidebarWrapper>
-      {/* </Hidden> */}
-      {/* <Hidden lgDown> */}
-      <SidebarPaper square elevation={sidebarShadow ? 11 : 3}>
-        <SidebarHeader fixed={sidebarFixed} />
-      </SidebarPaper>
-      {/* </Hidden> */}
+      <Hidden lgUp>
+        <SidebarWrapper
+          open={sidebarToggleMobile}
+          anchor="left"
+          variant="temporary"
+          elevation={4}
+          onClose={closeDrawer}
+        >
+          <SidebarHeader />
+        </SidebarWrapper>
+      </Hidden>
+      <Hidden mdDown>
+        <SidebarPaper square elevation={sidebarShadow ? 11 : 3}>
+          <SidebarHeader fixed={sidebarFixed} />
+        </SidebarPaper>
+      </Hidden>
     </>
   );
 };
