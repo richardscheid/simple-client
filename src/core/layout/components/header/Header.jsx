@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Box, Hidden } from '@material-ui/core';
-import { AppBar } from './style';
+import { Hidden } from '@material-ui/core';
+import { AppBar, Box } from './style';
 
 const Header = (props) => {
-  const toggleSidebarMobile = () =>
-    setSidebarToggleMobile(!sidebarToggleMobile);
+  const toggleSidebarMobile = () => !sidebarToggleMobile;
 
   const { headerShadow, headerFixed, sidebarToggleMobile } = props;
 
