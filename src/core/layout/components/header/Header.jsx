@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import { Hidden } from '@material-ui/core';
-import { AppBar, Box } from './style';
-import { BoxLogo, IconButton } from '../../../../components';
+import { AppBar, Box, HeaderIconButton, HeaderImage } from './style';
+import { BoxLogo } from '../../../../components';
+
+import logo from '../../../../assets/images/react.svg';
 
 const Header = (props) => {
   const toggleSidebarMobile = () => !sidebarToggleMobile;
@@ -22,9 +24,9 @@ const Header = (props) => {
           <Hidden>
             <BoxLogo title="Simple Corp">
               <Link to="/dashboard">
-                <IconButton color="primary" size="small">
-                  <Image src={logo} alt="Project logo" />
-                </IconButton>
+                <HeaderIconButton color="primary" size="small">
+                  <HeaderImage src={logo} alt="Project logo" />
+                </HeaderIconButton>
               </Link>
             </BoxLogo>
           </Hidden>
