@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+
 import {
   IconButton as CoreIconButton,
   AppBar as CoreAppBar,
@@ -30,6 +32,16 @@ export const HeaderIconButton = styled(CoreIconButton)`
 
   &:hover {
     background: rgba(255, 255, 255, 0.08);
+  }
+`;
+
+export const HeaderLink = styled(Link)`
+  text-decoration: none;
+  @include media-breakpoint-up(lg) {
+    margin-top: var(--spacer * 2);
+  }
+  @include media-breakpoint-down(lg) {
+    margin-right: var(--spacer);
   }
 `;
 
