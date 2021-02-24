@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Hidden } from '@material-ui/core';
 import { AppBar, Box } from './style';
+import { BoxLogo } from '../../../../components';
 
 const Header = (props) => {
   const toggleSidebarMobile = () => !sidebarToggleMobile;
@@ -17,7 +18,7 @@ const Header = (props) => {
       >
         <Box>
           <Hidden>
-            <Box>Header</Box>
+            <BoxLogo>Header</BoxLogo>
           </Hidden>
         </Box>
       </AppBar>
