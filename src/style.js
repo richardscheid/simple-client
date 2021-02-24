@@ -23,5 +23,8 @@ export const GlobalStyles = createGlobalStyle`
     --font-size: 16px;
     --header-height: 78px;
     --sidebar-width: 270px;
+    --font-size-base: 1rem;
+    --font-size-lg: 1rem * 1.25;
+    --font-size-sm: 1rem * .875;
   }
 `;
