@@ -13,7 +13,7 @@ export const AppBar = styled(CoreAppBar)`
   flex-direction: row;
 `;
 
-export const Box = styled(CoreBox)`
+export const BoxHeader = styled(CoreBox)`
   height: 100%;
   flex: 1;
   display: flex;
