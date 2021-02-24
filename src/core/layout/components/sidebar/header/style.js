@@ -1,18 +1,6 @@
-import { Box, IconButton as CoreIconButton } from '@material-ui/core';
+import { Box } from '@material-ui/core';
 import { withStyles } from '@material-ui/styles';
-import { rgba } from 'polished';
 import styled from 'styled-components';
-
-export const IconButton = withStyles({
-  root: {
-    padding: 16 / 3,
-    color: '#fff',
-    background: rgba(255, 255, 255, 0.09),
-    hover: {
-      background: rgba(255, 255, 255, 0.14),
-    },
-  },
-})(CoreIconButton);
 
 export const BoxTitle = withStyles({
   root: {
