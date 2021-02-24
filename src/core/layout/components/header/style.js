@@ -26,6 +26,13 @@ export const BoxHeader = styled(CoreBox)`
   }
 `;
 
+export const BoxText = styled(CoreBox)`
+  font-size: var(--font-size-base);
+  font-weight: bold;
+  width: auto;
+  display: block;
+`;
+
 export const IconButtonHeader = styled(CoreIconButton)`
   padding: var(--spacer) / 2;
   background: rgba(255, 255, 255, 0.05);
