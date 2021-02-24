@@ -3,3 +3,4 @@ export { Button } from './Button';
 export { LayoutContent } from './Layout/LayoutContent';
 
 export { BoxLogo } from './Box/style';
+export { IconButton } from './IconButton/style';
