@@ -5,6 +5,7 @@ import { Hidden } from '@material-ui/core';
 import {
   AppBarHeader,
   BoxHeader,
+  BoxText,
   IconButtonHeader,
   ImageHeader,
   LinkHeader,
@@ -33,6 +34,9 @@ const Header = (props) => {
                   <ImageHeader src={logo} alt="Project logo" />
                 </IconButtonHeader>
               </LinkHeader>
+              <Hidden smDown>
+                <BoxText>Simple Corp</BoxText>
+              </Hidden>
             </BoxLogo>
           </Hidden>
         </BoxHeader>
