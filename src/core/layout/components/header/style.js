@@ -37,12 +37,13 @@ export const HeaderIconButton = styled(CoreIconButton)`
 
 export const HeaderLink = styled(Link)`
   text-decoration: none;
-  @include media-breakpoint-up(lg) {
+
+  /* @include media-breakpoint-up(lg) {
     margin-top: var(--spacer * 2);
   }
   @include media-breakpoint-down(lg) {
     margin-right: var(--spacer);
-  }
+  } */
 `;
 
 export const HeaderImage = styled.img`
