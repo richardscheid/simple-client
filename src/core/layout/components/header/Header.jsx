@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+
 import { Hidden } from '@material-ui/core';
 import { AppBar, Box } from './style';
-import { BoxLogo } from '../../../../components';
+import { BoxLogo, IconButton } from '../../../../components';
 
 const Header = (props) => {
   const toggleSidebarMobile = () => !sidebarToggleMobile;
@@ -18,7 +20,13 @@ const Header = (props) => {
       >
         <Box>
           <Hidden>
-            <BoxLogo>Header</BoxLogo>
+            <BoxLogo title="Simple Corp">
+              <Link to="/dashboard">
+                <IconButton color="primary" size="small">
+                  <Image src={logo} alt="Project logo" />
+                </IconButton>
+              </Link>
+            </BoxLogo>
           </Hidden>
         </Box>
       </AppBar>

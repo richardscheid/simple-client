@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import logo from '../../../../../assets/images/react.svg';
-import { IconButton, BoxTitle, SidebarHeaderContent, Image } from './style';
-import { BoxLogo } from '../../../../../components';
+import { BoxTitle, SidebarHeaderContent, Image } from './style';
+import { BoxLogo, IconButton } from '../../../../../components';
 
 const SidebarHeader = (props) => {
   return (
