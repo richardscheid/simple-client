@@ -1,5 +1,9 @@
 import styled from 'styled-components';
-import { AppBar as CoreAppBar, Box as CoreBox } from '@material-ui/core';
+import {
+  IconButton as CoreIconButton,
+  AppBar as CoreAppBar,
+  Box as CoreBox,
+} from '@material-ui/core';
 
 export const AppBar = styled(CoreAppBar)`
   height: var(--header-height);
@@ -18,4 +22,18 @@ export const Box = styled(CoreBox)`
   .btn-inverse:hover {
     background: rgba(255, 255, 255, 0.07);
   }
+`;
+
+export const HeaderIconButton = styled(CoreIconButton)`
+  padding: var(--spacer) / 2;
+  background: rgba(255, 255, 255, 0.05);
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.08);
+  }
+`;
+
+export const HeaderImage = styled.img`
+  width: 28px;
+  height: 28px;
 `;
