@@ -14,13 +14,6 @@ export const IconButton = withStyles({
   },
 })(CoreIconButton);
 
-export const BoxHeader = withStyles({
-  root: {
-    display: 'flex',
-    alignItems: 'center',
-  },
-})(Box);
-
 export const BoxTitle = withStyles({
   root: {
     paddingLeft: 16 / 2,
