@@ -1,9 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 
 import { Hidden } from '@material-ui/core';
-import { AppBar, Box, HeaderIconButton, HeaderImage } from './style';
+import {
+  AppBar,
+  Box,
+  HeaderIconButton,
+  HeaderImage,
+  HeaderLink,
+} from './style';
 import { BoxLogo } from '../../../../components';
 
 import logo from '../../../../assets/images/react.svg';
@@ -23,11 +28,11 @@ const Header = (props) => {
         <Box>
           <Hidden>
             <BoxLogo title="Simple Corp">
-              <Link to="/dashboard">
-                <HeaderIconButton color="primary" size="small">
+              <HeaderLink to="/dashboard">
+                <HeaderIconButton color="primary" size="medium">
                   <HeaderImage src={logo} alt="Project logo" />
                 </HeaderIconButton>
-              </Link>
+              </HeaderLink>
             </BoxLogo>
           </Hidden>
         </Box>
