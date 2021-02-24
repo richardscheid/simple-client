@@ -1,6 +1,16 @@
-import { Box } from '@material-ui/core';
+import { Box, IconButton as CoreIconButton } from '@material-ui/core';
 import { withStyles } from '@material-ui/styles';
 import styled from 'styled-components';
+
+export const SidebarHeaderIconButton = styled(CoreIconButton)`
+  padding: var(--spacer) / 3;
+  color: '#fff';
+  background: rgba(255, 255, 255, 0.09);
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.14);
+  }
+`;
 
 export const BoxTitle = withStyles({
   root: {
