@@ -7,7 +7,7 @@ import {
   Box as CoreBox,
 } from '@material-ui/core';
 
-export const AppBar = styled(CoreAppBar)`
+export const AppBarHeader = styled(CoreAppBar)`
   height: var(--header-height);
   display: flex;
   flex-direction: row;
@@ -26,7 +26,7 @@ export const BoxHeader = styled(CoreBox)`
   }
 `;
 
-export const HeaderIconButton = styled(CoreIconButton)`
+export const IconButtonHeader = styled(CoreIconButton)`
   padding: var(--spacer) / 2;
   background: rgba(255, 255, 255, 0.05);
 
@@ -35,7 +35,7 @@ export const HeaderIconButton = styled(CoreIconButton)`
   }
 `;
 
-export const HeaderLink = styled(Link)`
+export const LinkHeader = styled(Link)`
   text-decoration: none;
 
   /* @include media-breakpoint-up(lg) {
@@ -46,7 +46,7 @@ export const HeaderLink = styled(Link)`
   } */
 `;
 
-export const HeaderImage = styled.img`
+export const ImageHeader = styled.img`
   width: 28px;
   height: 28px;
 `;

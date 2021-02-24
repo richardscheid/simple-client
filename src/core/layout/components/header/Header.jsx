@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 
 import { Hidden } from '@material-ui/core';
 import {
-  AppBar,
+  AppBarHeader,
   BoxHeader,
-  HeaderIconButton,
-  HeaderImage,
-  HeaderLink,
+  IconButtonHeader,
+  ImageHeader,
+  LinkHeader,
 } from './style';
 import { BoxLogo } from '../../../../components';
 
@@ -20,7 +20,7 @@ const Header = (props) => {
 
   return (
     <>
-      <AppBar
+      <AppBarHeader
         color="secondary"
         position={headerFixed ? 'fixed' : 'absolute'}
         elevation={headerShadow ? 11 : 3}
@@ -28,15 +28,15 @@ const Header = (props) => {
         <BoxHeader>
           <Hidden>
             <BoxLogo title="Simple Corp">
-              <HeaderLink to="/dashboard">
-                <HeaderIconButton color="primary" size="medium">
-                  <HeaderImage src={logo} alt="Project logo" />
-                </HeaderIconButton>
-              </HeaderLink>
+              <LinkHeader to="/dashboard">
+                <IconButtonHeader color="primary" size="medium">
+                  <ImageHeader src={logo} alt="Project logo" />
+                </IconButtonHeader>
+              </LinkHeader>
             </BoxLogo>
           </Hidden>
         </BoxHeader>
-      </AppBar>
+      </AppBarHeader>
     </>
   );
 };
