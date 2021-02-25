@@ -14,8 +14,8 @@ export const AppBarHeader = styled(CoreAppBar)`
 `;
 
 export const BoxHeader = styled(CoreBox)`
-  height: 100%;
   flex: 1;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   padding-left: var(--spacer);
@@ -28,9 +28,10 @@ export const BoxHeader = styled(CoreBox)`
 
 export const BoxText = styled(CoreBox)`
   font-size: var(--font-size-base);
+  padding-left: 10px;
   font-weight: bold;
-  width: auto;
   display: block;
+  width: auto;
 `;
 
 export const IconButtonHeader = styled(CoreIconButton)`
