@@ -5,12 +5,14 @@ import { Hidden } from '@material-ui/core';
 import {
   AppBarHeader,
   BoxHeader,
+  BoxMenu,
   BoxText,
   IconButtonHeader,
   ImageHeader,
   LinkHeader,
 } from './style';
 import { BoxLogo } from '../../../../components';
+import { Menu } from './menu';
 
 import logo from '../../../../assets/images/react.svg';
 
@@ -39,6 +41,9 @@ const Header = (props) => {
               </Hidden>
             </BoxLogo>
           </Hidden>
+          <BoxMenu>
+            <Menu />
+          </BoxMenu>
         </BoxHeader>
       </AppBarHeader>
     </>
