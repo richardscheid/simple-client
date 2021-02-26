@@ -22,6 +22,11 @@ export const BoxHeader = styled(CoreBox)`
   padding-right: var(--spacer);
 `;
 
+export const BoxMenu = styled(CoreBox)`
+  display: flex;
+  align-items: center;
+`;
+
 export const BoxText = styled(CoreBox)`
   font-size: var(--font-size-base);
   padding-left: 10px;
