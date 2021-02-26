@@ -1,5 +1,13 @@
 import React from 'react';
 
-const Menu = (props) => {};
+import { Button } from './style';
+
+const Menu = (props) => {
+  return (
+    <>
+      <Button color="inherit" />
+    </>
+  );
+};
 
 export { Menu };
