@@ -20,10 +20,6 @@ export const BoxHeader = styled(CoreBox)`
   justify-content: space-between;
   padding-left: var(--spacer);
   padding-right: var(--spacer);
-
-  .btn-inverse:hover {
-    background: rgba(255, 255, 255, 0.07);
-  }
 `;
 
 export const BoxText = styled(CoreBox)`
