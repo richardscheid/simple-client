@@ -36,5 +36,9 @@ export const MenuContainer = styled.div`
 `;
 
 export const UserContent = styled.div`
-  padding: 2px 3px 0 3px;
+  margin-top: 6px;
+`;
+
+export const UserDetail = styled.div`
+  font-weight: bold;
 `;
