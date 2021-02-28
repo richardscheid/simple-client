@@ -1,7 +1,14 @@
 import React, { useState } from 'react';
 
 import { Avatar, Box, Divider, ListItem } from '@material-ui/core';
-import { Button, Menu, MenuContainer, List, UserContent } from './style';
+import {
+  Button,
+  Menu,
+  MenuContainer,
+  List,
+  UserContent,
+  UserDetail,
+} from './style';
 
 import avatar from '../../../../../assets/images/avatar.png';
 
@@ -44,7 +51,9 @@ const HeaderMenu = () => {
             <Box>
               <Avatar sizes={44} src={avatar} alt="Avatar" />
             </Box>
-            <UserContent />
+            <UserContent>
+              <UserDetail>Richard Scheid</UserDetail>
+            </UserContent>
             <Divider variant="inset" />
             <ListItem button>My Account</ListItem>
             <ListItem button>Logout</ListItem>
