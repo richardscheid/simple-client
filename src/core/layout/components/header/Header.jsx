@@ -12,7 +12,7 @@ import {
   LinkHeader,
 } from './style';
 import { BoxLogo } from '../../../../components';
-import { Menu } from './menu';
+import { HeaderMenu } from './menu';
 
 import logo from '../../../../assets/images/react.svg';
 
@@ -42,7 +42,7 @@ const Header = (props) => {
             </BoxLogo>
           </Hidden>
           <BoxMenu>
-            <Menu />
+            <HeaderMenu />
           </BoxMenu>
         </BoxHeader>
       </AppBarHeader>
