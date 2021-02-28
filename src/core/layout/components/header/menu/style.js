@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import {
+  Divider as CoreDivider,
   Button as CoreButton,
   Menu as CoreMenu,
   List as CoreList,
@@ -27,16 +28,20 @@ export const List = styled(CoreList)`
   text-align: left;
 `;
 
+export const Divider = styled(CoreDivider)`
+  margin-top: 8px;
+  width: 100%;
+`;
+
 export const MenuContainer = styled.div`
   background-color: #fff;
   background-clip: padding-box;
   min-width: 11rem;
   list-style: none;
-  border: 1px solid rgba($black, 0.15);
 `;
 
 export const UserContent = styled.div`
-  margin-top: 6px;
+  margin-top: 8px;
 `;
 
 export const UserDetail = styled.div`
