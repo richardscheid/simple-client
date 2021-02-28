@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 
-import { Avatar, Box, Divider, ListItem } from '@material-ui/core';
+import { Avatar, Box, ListItem } from '@material-ui/core';
 import {
-  Button,
-  Menu,
   MenuContainer,
-  List,
   UserContent,
   UserDetail,
+  Divider,
+  Button,
+  Menu,
+  List,
 } from './style';
 
 import avatar from '../../../../../assets/images/avatar.png';
@@ -27,7 +28,7 @@ const HeaderMenu = () => {
     <>
       <Button color="inherit" onClick={onClick}>
         <Box>
-          <Avatar sizes={44} src={avatar} alt="Avatar" />
+          <Avatar sizes={46} src={avatar} alt="Avatar" />
         </Box>
       </Button>
 
@@ -54,7 +55,7 @@ const HeaderMenu = () => {
             <UserContent>
               <UserDetail>Richard Scheid</UserDetail>
             </UserContent>
-            <Divider variant="inset" />
+            <Divider />
             <ListItem button>My Account</ListItem>
             <ListItem button>Logout</ListItem>
           </List>
