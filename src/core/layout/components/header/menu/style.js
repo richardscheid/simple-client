@@ -34,3 +34,7 @@ export const MenuContainer = styled.div`
   list-style: none;
   border: 1px solid rgba($black, 0.15);
 `;
+
+export const UserContent = styled.div`
+  padding: 2px 3px 0 3px;
+`;
