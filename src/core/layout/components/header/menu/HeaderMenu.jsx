@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import { Avatar, Box, Menu } from '@material-ui/core';
-import { Button } from './style';
+import { Avatar, Box } from '@material-ui/core';
+import { Button, Menu } from './style';
 
 import avatar from '../../../../../assets/images/avatar.png';
 

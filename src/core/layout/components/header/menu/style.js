@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Button as CoreButton } from '@material-ui/core';
+import { Button as CoreButton, Menu as CoreMenu } from '@material-ui/core';
 
 export const Button = styled(CoreButton)`
   padding-left: 3px;
@@ -10,4 +10,8 @@ export const Button = styled(CoreButton)`
   &:hover {
     background: rgba(255, 255, 255, 0.07);
   }
+`;
+
+export const Menu = styled(CoreMenu)`
+  margin-left: var(--spacer * 0.5);
 `;
