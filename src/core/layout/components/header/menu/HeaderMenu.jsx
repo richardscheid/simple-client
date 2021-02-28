@@ -8,7 +8,7 @@ import avatar from '../../../../../assets/images/avatar.png';
 const HeaderMenu = () => {
   const [anchor, setAnchor] = useState(null);
 
-  function handle(event) {
+  function onClick(event) {
     setAnchor(event.currentTarget);
   }
 
@@ -18,13 +18,31 @@ const HeaderMenu = () => {
 
   return (
     <>
-      <Button color="inherit">
+      <Button color="inherit" onClick={onClick}>
         <Box>
           <Avatar sizes={44} src={avatar} alt="Avatar" />
         </Box>
       </Button>
 
-      <Menu anchor />
+      <Menu
+        keepMounted
+        getContentAnchorEl={null}
+        open={Boolean(anchor)}
+        anchorEl={anchor}
+        anchorOrigin={{
+          vertical: 'center',
+          horizontal: 'center',
+        }}
+        transformOrigin={{
+          vertical: 'center',
+          horizontal: 'center',
+        }}
+        onClose={onClose}
+      >
+        <Box>
+          <Avatar sizes={44} src={avatar} alt="Avatar" />
+        </Box>
+      </Menu>
     </>
   );
 };
