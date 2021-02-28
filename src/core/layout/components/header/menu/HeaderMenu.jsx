@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import { Avatar, Box } from '@material-ui/core';
-import { Button, Menu } from './style';
+import { Avatar, Box, Divider, ListItem } from '@material-ui/core';
+import { Button, Menu, MenuContainer, List } from './style';
 
 import avatar from '../../../../../assets/images/avatar.png';
 
@@ -39,9 +39,16 @@ const HeaderMenu = () => {
         }}
         onClose={onClose}
       >
-        <Box>
-          <Avatar sizes={44} src={avatar} alt="Avatar" />
-        </Box>
+        <MenuContainer>
+          <List>
+            <Box>
+              <Avatar sizes={44} src={avatar} alt="Avatar" />
+            </Box>
+            <Divider variant="inset" />
+            <ListItem button>My Account</ListItem>
+            <ListItem button>Logout</ListItem>
+          </List>
+        </MenuContainer>
       </Menu>
     </>
   );
