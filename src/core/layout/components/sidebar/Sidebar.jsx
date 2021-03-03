@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Hidden } from '@material-ui/core';
-import { SidebarDrawer, SidebarPaper } from './style';
+import { Drawer, Paper } from './style';
 import { SidebarHeader } from './header';
 
 const Sidebar = (props) => {
@@ -12,7 +12,7 @@ const Sidebar = (props) => {
   return (
     <>
       <Hidden lgUp>
-        <SidebarDrawer
+        <Drawer
           open={sidebarToggleMobile}
           anchor="left"
           variant="temporary"
@@ -20,12 +20,12 @@ const Sidebar = (props) => {
           onClose={closeDrawer}
         >
           <SidebarHeader />
-        </SidebarDrawer>
+        </Drawer>
       </Hidden>
       <Hidden mdDown>
-        <SidebarPaper square elevation={sidebarShadow ? 11 : 3}>
+        <Paper square elevation={sidebarShadow ? 11 : 3}>
           <SidebarHeader fixed={sidebarFixed} />
-        </SidebarPaper>
+        </Paper>
       </Hidden>
     </>
   );

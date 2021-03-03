@@ -1,7 +1,7 @@
-import { Drawer, Paper } from '@material-ui/core';
+import { Drawer as CoreDrawer, Paper as CorePaper } from '@material-ui/core';
 import styled from 'styled-components';
 
-export const SidebarDrawer = styled(Drawer)`
+export const Drawer = styled(CoreDrawer)`
   width: 270;
   min-height: 100%;
   padding-top: 0;
@@ -10,7 +10,7 @@ export const SidebarDrawer = styled(Drawer)`
   flex-direction: column;
 `;
 
-export const SidebarPaper = styled(Paper)`
+export const Paper = styled(CorePaper)`
   display: flex;
   flex-direction: column;
   min-height: 100%;
