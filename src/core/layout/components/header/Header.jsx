@@ -31,12 +31,12 @@ const Header = (props) => {
         <BoxHeader>
           <Hidden lgUp>
             <BoxLogo title="Simple Corp">
-              <LinkHeader to="/dashboard">
-                <IconButtonHeader color="primary" size="medium">
-                  <ImageHeader src={logo} alt="Project logo" />
-                </IconButtonHeader>
-              </LinkHeader>
-              <Hidden smDown>
+              <Hidden smUp>
+                <LinkHeader to="/dashboard">
+                  <IconButtonHeader color="primary" size="medium">
+                    <ImageHeader src={logo} alt="Project logo" />
+                  </IconButtonHeader>
+                </LinkHeader>
                 <BoxText>Simple Header</BoxText>
               </Hidden>
             </BoxLogo>
