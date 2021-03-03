@@ -40,7 +40,7 @@ Layout.propTypes = {
 
 Layout.defaultProps = {
   children: PropTypes.node,
-  sidebarFixed: false,
+  sidebarFixed: true,
   footerFixed: false,
 };
 
