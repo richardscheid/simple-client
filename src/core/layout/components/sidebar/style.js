@@ -17,6 +17,6 @@ export const Paper = styled(CorePaper)`
   flex-direction: column;
   overflow: hidden;
   z-index: 60;
-  transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+  transition: all 0.5s var(--app-sidebar-transition);
   position: ${(props) => (props.fixed ? 'static' : 'fixed')};
 `;

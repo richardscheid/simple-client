@@ -32,7 +32,7 @@ export const LogoHeaderContent = styled.div`
   padding-left: var(--spacer);
   padding-right: var(--spacer);
   justify-content: space-between;
-  transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+  transition: all 0.5s var(--app-sidebar-transition);
   background: rgba(255, 255, 255, 0.08);
 `;
 
