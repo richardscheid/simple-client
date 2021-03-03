@@ -20,7 +20,7 @@ const SidebarHeader = (props) => {
               <Image src={logo} alt="Project logo" />
             </SidebarHeaderIconButton>
           </Link>
-          <BoxTitle>Simple</BoxTitle>
+          <BoxTitle>Simple Sidebar Header</BoxTitle>
         </BoxLogo>
       </SidebarHeaderContent>
     </>
