@@ -1,7 +1,7 @@
 import { Drawer, Paper } from '@material-ui/core';
 import styled from 'styled-components';
 
-export const SidebarWrapper = styled(Drawer)`
+export const SidebarDrawer = styled(Drawer)`
   width: 270;
   min-height: 100%;
   padding-top: 0;
