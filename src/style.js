@@ -22,6 +22,7 @@ export const GlobalStyles = createGlobalStyle`
     --spacer: 1rem;
     --font-size: 16px;
     --header-height: 78px;
+    --footer-height: 70px;
     --sidebar-width: 270px;
     --font-size-base: 1rem;
     --font-size-lg: 1rem * 1.25;
