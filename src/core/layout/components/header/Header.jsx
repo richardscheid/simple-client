@@ -13,13 +13,12 @@ import {
 } from './style';
 import { BoxLogo } from '../../../../components';
 import { HeaderMenu } from './menu';
+import { HeaderLogo } from './logo';
 
 import logo from '../../../../assets/images/react.svg';
 
 const Header = (props) => {
-  const toggleSidebarMobile = () => !sidebarToggleMobile;
-
-  const { headerShadow, headerFixed, sidebarToggleMobile } = props;
+  const { headerShadow, headerFixed, isCollapsedLayout } = props;
 
   return (
     <>
@@ -28,8 +27,9 @@ const Header = (props) => {
         position={headerFixed ? 'fixed' : 'absolute'}
         elevation={headerShadow ? 11 : 3}
       >
+        {!isCollapsedLayout && <HeaderLogo />}
         <BoxHeader>
-          <Hidden>
+          <Hidden lgDown>
             <BoxLogo title="Simple Corp">
               <LinkHeader to="/dashboard">
                 <IconButtonHeader color="primary" size="medium">
@@ -53,13 +53,13 @@ const Header = (props) => {
 Header.propTypes = {
   headerFixed: PropTypes.bool,
   headerShadow: PropTypes.bool,
-  sidebarToggleMobile: PropTypes.bool,
+  isCollapsedLayout: PropTypes.bool,
 };
 
 Header.defaultProps = {
   headerFixed: true,
   headerShadow: false,
-  sidebarToggleMobile: false,
+  isCollapsedLayout: false,
 };
 
 export { Header };
