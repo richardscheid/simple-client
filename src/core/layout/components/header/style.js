@@ -46,13 +46,6 @@ export const IconButtonHeader = styled(CoreIconButton)`
 
 export const LinkHeader = styled(Link)`
   text-decoration: none;
-
-  /* @include media-breakpoint-up(lg) {
-    margin-top: var(--spacer * 2);
-  }
-  @include media-breakpoint-down(lg) {
-    margin-right: var(--spacer);
-  } */
 `;
 
 export const ImageHeader = styled.img`
