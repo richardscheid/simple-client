@@ -13,10 +13,11 @@ export const IconButton = styled(CoreIconButton)`
 `;
 
 export const BoxTitle = styled(Box)`
-  padding-left: 16 / 2;
-  font-size: 16 * 1.1;
-  font-weight: 'bold';
-  width: 'auto';
+  font-size: var(--font-size-base);
+  padding-left: 10px;
+  font-weight: bold;
+  display: block;
+  width: auto;
 `;
 
 export const Link = styled(DomLink)`
