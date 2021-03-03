@@ -29,7 +29,7 @@ const Header = (props) => {
       >
         {!isCollapsedLayout && <HeaderLogo />}
         <BoxHeader>
-          <Hidden lgDown>
+          <Hidden lgUp>
             <BoxLogo title="Simple Corp">
               <LinkHeader to="/dashboard">
                 <IconButtonHeader color="primary" size="medium">
