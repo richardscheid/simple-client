@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 
 import { Hidden } from '@material-ui/core';
 import {
+  IconButtonHeader,
   AppBarHeader,
+  ImageHeader,
+  LinkHeader,
   BoxHeader,
   BoxMenu,
   BoxText,
-  IconButtonHeader,
-  ImageHeader,
-  LinkHeader,
 } from './style';
 import { BoxLogo } from '../../../../components';
 import { HeaderMenu } from './menu';
