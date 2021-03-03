@@ -1,17 +1,14 @@
-import { withStyles } from '@material-ui/styles';
 import { Drawer, Paper } from '@material-ui/core';
 import styled from 'styled-components';
 
-export const SidebarWrapper = withStyles({
-  root: {
-    width: 270,
-    minHeight: '100%',
-    paddingTop: 0,
-    display: 'flex',
-    overflowY: 'auto',
-    flexDirection: 'column',
-  },
-})(Drawer);
+export const SidebarWrapper = styled(Drawer)`
+  width: 270;
+  min-height: 100%;
+  padding-top: 0;
+  display: flex;
+  overflow-y: auto;
+  flex-direction: column;
+`;
 
 export const SidebarPaper = styled(Paper)`
   display: 'flex';
