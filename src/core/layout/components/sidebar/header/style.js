@@ -1,5 +1,4 @@
 import { Box, IconButton as CoreIconButton } from '@material-ui/core';
-import { withStyles } from '@material-ui/styles';
 import styled from 'styled-components';
 
 export const SidebarHeaderIconButton = styled(CoreIconButton)`
@@ -12,14 +11,13 @@ export const SidebarHeaderIconButton = styled(CoreIconButton)`
   }
 `;
 
-export const BoxTitle = withStyles({
-  root: {
-    paddingLeft: 16 / 2,
-    fontSize: 16 * 1.1,
-    fontWeight: 'bold',
-    width: 'auto',
-  },
-})(Box);
+export const BoxTitle = styled(Box)`
+  font-size: var(--font-size-base);
+  padding-left: 10px;
+  font-weight: bold;
+  display: block;
+  width: auto;
+`;
 
 export const SidebarHeaderContent = styled.div`
   height: var(--header-height);
