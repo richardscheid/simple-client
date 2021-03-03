@@ -2,10 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { Header, Sidebar } from './components';
-import { LayoutContainer, LayoutWrapper } from './style';
+import {
+  LayoutContainer,
+  LayoutWrapper,
+  LayoutContent,
+  WrapperContent,
+  InnerContent,
+} from './style';
 
 const Layout = (props) => {
-  const { children } = props;
+  const { children, sidebarToggle, sidebarFixed, footerFixed } = props;
 
   return (
     <>
@@ -14,11 +20,16 @@ const Layout = (props) => {
 
         <LayoutWrapper>
           <Sidebar />
-          <div>
-            <div>{children}</div>
-
-            <div> Footer </div>
-          </div>
+          <LayoutContent
+            sidebarToggle={sidebarToggle}
+            sidebarFixed={sidebarFixed}
+            footerFixe={footerFixed}
+          >
+            <InnerContent>
+              <WrapperContent>{children}</WrapperContent>
+            </InnerContent>
+            Footer
+          </LayoutContent>
         </LayoutWrapper>
       </LayoutContainer>
     </>
@@ -27,10 +38,16 @@ const Layout = (props) => {
 
 Layout.propTypes = {
   children: PropTypes.node,
+  sidebarToggle: PropTypes.bool,
+  sidebarFixed: PropTypes.bool,
+  footerFixed: PropTypes.bool,
 };
 
 Layout.defaultProps = {
   children: PropTypes.node,
+  sidebarToggle: false,
+  sidebarFixed: false,
+  footerFixed: false,
 };
 
 export { Layout };
