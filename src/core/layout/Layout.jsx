@@ -11,7 +11,7 @@ import {
 } from './style';
 
 const Layout = (props) => {
-  const { children, sidebarToggle, sidebarFixed, footerFixed } = props;
+  const { children, sidebarFixed, footerFixed } = props;
 
   return (
     <>
@@ -20,11 +20,7 @@ const Layout = (props) => {
 
         <LayoutWrapper>
           <Sidebar />
-          <LayoutContent
-            sidebarToggle={sidebarToggle}
-            sidebarFixed={sidebarFixed}
-            footerFixe={footerFixed}
-          >
+          <LayoutContent sidebarFixed={sidebarFixed} footerFixed={footerFixed}>
             <InnerContent>
               <WrapperContent>{children}</WrapperContent>
             </InnerContent>
@@ -38,14 +34,12 @@ const Layout = (props) => {
 
 Layout.propTypes = {
   children: PropTypes.node,
-  sidebarToggle: PropTypes.bool,
   sidebarFixed: PropTypes.bool,
   footerFixed: PropTypes.bool,
 };
 
 Layout.defaultProps = {
   children: PropTypes.node,
-  sidebarToggle: false,
   sidebarFixed: false,
   footerFixed: false,
 };
