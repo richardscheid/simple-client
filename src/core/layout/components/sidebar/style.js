@@ -2,7 +2,7 @@ import { Drawer as CoreDrawer, Paper as CorePaper } from '@material-ui/core';
 import styled from 'styled-components';
 
 export const Drawer = styled(CoreDrawer)`
-  width: 270;
+  width: var(--sidebar-width);
   min-height: 100%;
   padding-top: 0;
   display: flex;
