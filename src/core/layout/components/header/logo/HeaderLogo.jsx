@@ -14,7 +14,7 @@ const HeaderLogo = () => {
               <Image src={logo} alt="Project logo" />
             </IconButton>
           </Link>
-          <BoxTitle>Simple</BoxTitle>
+          <BoxTitle>Simple Header Logo</BoxTitle>
         </BoxLogo>
       </LogoHeaderContent>
     </>
