@@ -37,7 +37,7 @@ const Header = (props) => {
                 </IconButtonHeader>
               </LinkHeader>
               <Hidden smDown>
-                <BoxText>Simple Corp</BoxText>
+                <BoxText>Simple Header</BoxText>
               </Hidden>
             </BoxLogo>
           </Hidden>
