@@ -24,10 +24,10 @@ export const SidebarHeaderContent = styled.div`
   width: var(--sidebar-width);
   display: flex;
   align-items: center;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: var(--spacer);
+  padding-right: var(--spacer);
   justify-content: space-between;
-  transition: 'all .2s ease-in-out';
+  transition: all 0.2s ease-in-out;
   background-color: rgba(255, 255, 255, 1);
 `;
 
