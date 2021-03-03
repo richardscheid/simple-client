@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const LayoutContainer = styled.div`
   display: flex;
@@ -13,12 +13,29 @@ export const LayoutWrapper = styled.div`
 `;
 
 export const LayoutContent = styled.div`
-  flex: 1;
   display: flex;
-  padding: 0;
   flex-direction: column;
+  flex: 1;
+  padding: 0;
   transition: all 0.5s var(--app-sidebar-transition);
   padding-top: var(--header-height);
+
+  ${({ footerFixed }) =>
+    footerFixed &&
+    css`
+      padding-bottom: var(--footer-height);
+      height: auto;
+    `}
+
+  ${({ sidebarFixed }) =>
+    sidebarFixed &&
+    css`
+      height: 100vh;
+
+      @include media-breakpoint-up(lg) {
+        padding-left: var(--sidebar-width);
+      }
+    `}
 `;
 
 export const InnerContent = styled(LayoutContent)`
