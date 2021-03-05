@@ -9,5 +9,19 @@
     "email": "E-mail",
     "password": "Senha",
     "forgot": "Esqueci a senha"
+  },
+  "menu": {
+    "title:": "Menu",
+    "dashboard": {
+      "title": "Dashboard"
+    },
+    "user": {
+      "title": "Usuários",
+      "description": "Cadastro de Usuários"
+    },
+    "category": {
+      "title": "Categorias",
+      "description": "Cadastro de Categorias"
+    }
   }
 }
