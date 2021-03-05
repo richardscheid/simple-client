@@ -1,0 +1,42 @@
+export default [
+  {
+    label: 'Menu',
+    content: JSON.parse(
+      `[
+          {
+              "title":"Dashboards",
+              "enable":"true",
+              "content":[
+                  {
+                      "label":"Dashboard",
+                      "description":"description",
+                      "to":"/dashboard",
+                      "enable":"true",
+                      "role":"CUSTOMER"
+                  }
+              ]
+          },
+          {
+              "title":"Cadastros",
+              "enable":"true",
+              "content":[
+                  {
+                      "title":"Usuários",
+                      "description":"description",
+                      "to":"/users",
+                      "enable":"true",
+                      "role":"CUSTOMER"
+                  },
+                  {
+                      "title":"Categorias",
+                      "description":"description",
+                      "to":"/categories",
+                      "enable":"true",
+                      "role":"CUSTOMER"
+                  },
+              ]
+          }
+      ]`
+    ),
+  },
+];
