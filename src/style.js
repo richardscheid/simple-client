@@ -31,6 +31,6 @@ export const GlobalStyles = createGlobalStyle`
     --transition-base: all .2s ease-in-out;
     --app-sidebar-transition: cubic-bezier(0.685, 0.0473, 0.346, 1);
     --layout-spacer: (1rem * 2);
-    --primary: variables.primary
+    --primary: variables.primary;
   }
 `;
