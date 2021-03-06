@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const Typography = styled(CoreTypography)`
   padding: var(--spacer) var(--spacer) (var(--spacer) / 1.1);
   font-weight: bold;
-  color: $blue;
+  color: #007bff;
   text-transform: uppercase;
   font-size: var(--font-size-sm);
   white-space: nowrap;

@@ -15,4 +15,5 @@ export default {
   green: '#1bc943',
   teal: '#18e1a5',
   cyan: '#27dcf3',
+  blue: '#007bff',
 };
