@@ -20,7 +20,7 @@ export const Button = styled(CoreButton)`
   font-size: 15px;
   width: 100%;
   font-weight: normal;
-  transition: $transition-base;
+  transition: var(--transition-base);
   color: $blue;
   white-space: nowrap;
 
@@ -39,7 +39,7 @@ export const WrapperButton = styled(CoreButton)`
   text-transform: none;
   width: 100%;
   border-radius: 3px;
-  transition: $transition-base;
+  transition: var(--transition-base);
   font-weight: normal;
 
   &.depth-0 {
@@ -61,7 +61,7 @@ export const ExpandLessIcon = styled(CoreExpand)`
   height: 16px;
   width: 16px;
   opacity: 0.6;
-  transition: $transition-base;
+  transition: var(--transition-base);
 `;
 
 export const ExpandLessIconRotate = styled(ExpandLessIcon)`
