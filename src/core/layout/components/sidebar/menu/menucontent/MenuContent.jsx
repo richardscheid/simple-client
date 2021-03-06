@@ -11,9 +11,7 @@ const MenuContent = (props) => {
 
   return (
     <div {...rest}>
-      {title && (
-        <Typography className="app-sidebar-heading">{title}</Typography>
-      )}
+      {title && <Typography>{title}</Typography>}
       <MenuList depth={0} pages={pages} location={location} />
     </div>
   );

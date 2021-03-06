@@ -28,7 +28,7 @@ const HeaderMenu = () => {
     <>
       <Button color="inherit" onClick={onClick}>
         <Box>
-          <Avatar sizes={46} src={avatar} alt="Avatar" />
+          <Avatar src={avatar} alt="Avatar" />
         </Box>
       </Button>
 
@@ -50,7 +50,7 @@ const HeaderMenu = () => {
         <MenuContainer>
           <List>
             <Box>
-              <Avatar sizes={44} src={avatar} alt="Avatar" />
+              <Avatar src={avatar} alt="Avatar" />
             </Box>
             <UserContent>
               <UserDetail>Richard Scheid</UserDetail>
