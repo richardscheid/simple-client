@@ -28,6 +28,7 @@ export const GlobalStyles = createGlobalStyle`
     --font-size-base: 1rem;
     --font-size-lg: 1rem * 1.25;
     --font-size-sm: 1rem * .875;
+    --transition-base: all .2s ease-in-out;
     --app-sidebar-transition: cubic-bezier(0.685, 0.0473, 0.346, 1);
     --layout-spacer: (1rem * 2);
     --primary: variables.primary
