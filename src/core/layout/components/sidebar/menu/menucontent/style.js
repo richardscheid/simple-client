@@ -6,7 +6,7 @@ export const Typography = styled(CoreTypography)`
   font-weight: bold;
   color: $blue;
   text-transform: uppercase;
-  font-size: $font-size-sm;
+  font-size: var(--font-size-sm);
   white-space: nowrap;
   transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
 `;
