@@ -12,6 +12,7 @@
   },
   "menu": {
     "title:": "Menu",
+    "register": "Cadastros",
     "dashboard": {
       "title": "Dashboard"
     },
