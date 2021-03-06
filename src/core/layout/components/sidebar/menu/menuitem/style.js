@@ -52,7 +52,7 @@ export const WrapperButton = styled(CoreButton)`
   &.active,
   &:hover {
     background: none;
-    color: $primary;
+    color: var(--primary);
   }
 `;
 
