@@ -8,7 +8,7 @@ export default [
               "enable":"true",
               "content":[
                   {
-                      "label":"menu.dashboard.title",
+                      "title":"menu.dashboard.title",
                       "to":"/dashboard",
                       "enable":"true",
                       "role":"CUSTOMER"
