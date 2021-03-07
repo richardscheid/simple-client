@@ -3,7 +3,7 @@ import {
   ListItem as CoreListItem,
   Button as CoreButton,
 } from '@material-ui/core';
-import { ExpandLessIcon as CoreExpand } from '@material-ui/icons/ExpandLess';
+import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 
 export const ListItem = styled(CoreListItem)`
   display: block;
@@ -56,7 +56,7 @@ export const WrapperButton = styled(CoreButton)`
   }
 `;
 
-export const ExpandLessIcon = styled(CoreExpand)`
+export const ExpandLess = styled(ExpandLessIcon)`
   margin-left: auto;
   height: 16px;
   width: 16px;
@@ -64,7 +64,7 @@ export const ExpandLessIcon = styled(CoreExpand)`
   transition: var(--transition-base);
 `;
 
-export const ExpandLessIconRotate = styled(ExpandLessIcon)`
+export const ExpandLessRotate = styled(ExpandLess)`
   opacity: 0.9;
   transform: rotate(180deg);
 `;
