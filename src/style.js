@@ -1,5 +1,4 @@
 import styled, { createGlobalStyle } from 'styled-components';
-import variables from './core/theme/variables';
 
 export const AppContainer = styled.div`
   width: 100%;
@@ -31,6 +30,6 @@ export const GlobalStyles = createGlobalStyle`
     --transition-base: all .2s ease-in-out;
     --app-sidebar-transition: cubic-bezier(0.685, 0.0473, 0.346, 1);
     --layout-spacer: (1rem * 2);
-    --primary: variables.primary;
+    --primary: #5383ff;
   }
 `;
