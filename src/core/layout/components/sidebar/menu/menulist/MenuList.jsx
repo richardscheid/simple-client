@@ -20,8 +20,8 @@ MenuList.propTypes = {
 };
 
 MenuList.defaultProps = {
-  depth: PropTypes.number,
-  pages: PropTypes.array,
+  depth: 0,
+  pages: [],
 };
 
 export { MenuList };
