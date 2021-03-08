@@ -31,5 +31,6 @@ export const GlobalStyles = createGlobalStyle`
     --app-sidebar-transition: cubic-bezier(0.685, 0.0473, 0.346, 1);
     --layout-spacer: (1rem * 2);
     --primary: #5383ff;
+    --blue: #007bff;
   }
 `;
