@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 import { Collapse } from '@material-ui/core';
 
 import {
-  ExpandLessIconRotate,
-  ExpandLessIcon,
+  ExpandLessRotate,
+  ExpandLess,
   WrapperButton,
   ListItem,
   Button,
@@ -22,16 +22,7 @@ const CustomRouterLink = forwardRef(function CustomLink(props, ref) {
 });
 
 const MenuItem = (props) => {
-  const {
-    title,
-    href,
-    depth,
-    children,
-    icon: Icon,
-    open: openProp,
-    label: Label,
-    ...rest
-  } = props;
+  const { title, link, depth, children, open: openProp, ...rest } = props;
 
   const [open, setOpen] = useState(openProp);
 
@@ -44,15 +35,15 @@ const MenuItem = (props) => {
       <ListItem {...rest} disableGutters>
         <Button
           color="primary"
-          active={open}
+          // active={open}
           depth={depth}
           onClick={handleToggle}
         >
           <span>{title}</span>
           {open ? (
-            <ExpandLessIcon color="inherit" />
+            <ExpandLess color="inherit" />
           ) : (
-            <ExpandLessIconRotate color="inherit" />
+            <ExpandLessRotate color="inherit" />
           )}
         </Button>
         <Collapse in={open}>{children}</Collapse>
@@ -68,17 +59,10 @@ const MenuItem = (props) => {
         variant="text"
         component={CustomRouterLink}
         exact
-        to={href}
-        active={open}
+        to={link}
         depth={depth}
       >
-        {Icon && <Icon className="app-sidebar-icon" />}
-        {title}
-        {Label && (
-          <LabelItem>
-            <Label />
-          </LabelItem>
-        )}
+        <span>{title}</span>
       </WrapperButton>
     </ListItem>
   );
@@ -86,20 +70,16 @@ const MenuItem = (props) => {
 
 MenuItem.propTypes = {
   children: PropTypes.node,
+  link: PropTypes.string,
+  open: PropTypes.bool,
   title: PropTypes.string.isRequired,
   depth: PropTypes.number.isRequired,
-  href: PropTypes.string,
-  icon: PropTypes.any,
-  label: PropTypes.string,
-  open: PropTypes.bool,
 };
 
 MenuItem.defaultProps = {
-  children: PropTypes.node,
-  href: PropTypes.string,
-  icon: PropTypes.any,
-  label: PropTypes.string,
+  children: null,
+  link: null,
   open: false,
 };
 
-export default MenuItem;
+export { MenuItem };
