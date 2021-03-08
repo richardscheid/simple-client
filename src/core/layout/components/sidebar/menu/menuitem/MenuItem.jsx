@@ -8,8 +8,8 @@ import {
   ExpandLessRotate,
   ExpandLess,
   WrapperButton,
+  MenuButton,
   ListItem,
-  Button,
   LabelItem,
 } from './style';
 
@@ -33,7 +33,7 @@ const MenuItem = (props) => {
   if (children) {
     return (
       <ListItem {...rest} disableGutters>
-        <Button
+        <MenuButton
           color="primary"
           // active={open}
           depth={depth}
@@ -45,7 +45,7 @@ const MenuItem = (props) => {
           ) : (
             <ExpandLessRotate color="inherit" />
           )}
-        </Button>
+        </MenuButton>
         <Collapse in={open}>{children}</Collapse>
       </ListItem>
     );
