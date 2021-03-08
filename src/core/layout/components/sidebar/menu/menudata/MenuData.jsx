@@ -16,30 +16,21 @@ const MenuData = (props) => {
     items.push(
       <MenuItem
         depth={depth}
-        icon={page.icon}
-        key={page.label}
-        label={page.badge}
+        link={page.to}
+        key={page.title}
+        title={page.title}
         open={Boolean(open)}
-        title={page.label}
       >
-        <div className="sidebar-menu-children py-2">
-          <MenuList
-            depth={depth + 1}
-            pages={page.content}
-            location={location}
-          />
-        </div>
+        <MenuList depth={depth + 1} pages={page.content} location={location} />
       </MenuItem>
     );
   } else {
     items.push(
       <MenuItem
         depth={depth}
-        href={page.to}
-        icon={page.icon}
-        key={page.label}
-        label={page.badge}
-        title={page.label}
+        link={page.to}
+        key={page.title}
+        title={page.title}
       />
     );
   }
