@@ -26,7 +26,7 @@ const Sidebar = (props) => {
           <PerfectScrollbar>{MenuContainer}</PerfectScrollbar>
         </Drawer>
       </Hidden>
-      <Hidden mdDown>
+      <Hidden>
         <Paper square elevation={sidebarShadow ? 11 : 3}>
           <SidebarHeader fixed={sidebarFixed} />
           <PerfectScrollbar options={{ wheelPropagation: false }}>
