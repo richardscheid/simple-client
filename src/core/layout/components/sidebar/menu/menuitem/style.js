@@ -26,6 +26,7 @@ export const MenuButton = styled(CoreButton)`
 
   padding-left: ${(props) => (props.depth > 0 ? (16 + 20) * props.depth : 22)};
 
+  &.active,
   &:hover {
     color: var(--primary);
     background: #eeeff8;
