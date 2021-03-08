@@ -6,7 +6,7 @@ import data from '../data';
 const MenuContainer = (
   <div>
     {data.map((list) => (
-      <MenuContent key={list.title} pages={list.content} title={list.title} />
+      <MenuContent key={list.label} pages={list.content} title={list.label} />
     ))}
   </div>
 );
