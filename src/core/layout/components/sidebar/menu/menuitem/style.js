@@ -10,7 +10,7 @@ export const ListItem = styled(CoreListItem)`
   padding: 2px var(--spacer) 1px 0;
 `;
 
-export const Button = styled(CoreButton)`
+export const MenuButton = styled(CoreButton)`
   padding-top: var(--spacer) / 2.4;
   padding-bottom: var(--spacer) / 2.4;
   padding-right: var(--spacer) / 2;
@@ -24,7 +24,7 @@ export const Button = styled(CoreButton)`
   color: $blue;
   white-space: nowrap;
 
-  padding-left: ${(props) => (props.depth > 0 ? 16 + 20 * props.depth : 22)};
+  padding-left: ${(props) => (props.depth > 0 ? (16 + 20) * props.depth : 22)};
 
   &.active,
   &:hover {
