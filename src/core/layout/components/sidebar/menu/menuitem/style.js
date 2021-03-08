@@ -11,9 +11,9 @@ export const ListItem = styled(CoreListItem)`
 `;
 
 export const MenuButton = styled(CoreButton)`
-  padding-top: var(--spacer) / 2.4;
-  padding-bottom: var(--spacer) / 2.4;
-  padding-right: var(--spacer) / 2;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 10px;
   justify-content: flex-start;
   text-transform: none;
   border-radius: 0 22px 22px 0;
@@ -21,12 +21,11 @@ export const MenuButton = styled(CoreButton)`
   width: 100%;
   font-weight: normal;
   transition: var(--transition-base);
-  color: $blue;
+  color: var(--blue);
   white-space: nowrap;
 
   padding-left: ${(props) => (props.depth > 0 ? (16 + 20) * props.depth : 22)};
 
-  &.active,
   &:hover {
     color: var(--primary);
     background: #eeeff8;
