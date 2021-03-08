@@ -20,11 +20,7 @@ const MenuContent = (props) => {
 
 MenuContent.propTypes = {
   pages: PropTypes.array.isRequired,
-  title: PropTypes.string,
-};
-
-MenuContent.defaultProps = {
-  title: '',
+  title: PropTypes.string.isRequired,
 };
 
 export { MenuContent };
