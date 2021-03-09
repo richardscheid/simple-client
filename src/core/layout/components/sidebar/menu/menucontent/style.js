@@ -2,9 +2,8 @@ import { Typography as CoreTypography } from '@material-ui/core';
 import styled from 'styled-components';
 
 export const Typography = styled(CoreTypography)`
-  padding: var(--spacer) var(--spacer) (var(--spacer) / 1.1);
+  padding: 10px 10px 10px;
   font-weight: bold;
-  color: #007bff;
   text-transform: uppercase;
   font-size: var(--font-size-sm);
   white-space: nowrap;
