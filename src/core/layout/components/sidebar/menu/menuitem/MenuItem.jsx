@@ -1,5 +1,6 @@
 import React, { useState, forwardRef } from 'react';
 import { NavLink as RouterLink } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 
 import { Collapse } from '@material-ui/core';
@@ -22,6 +23,8 @@ const CustomRouterLink = forwardRef(function CustomLink(props, ref) {
 });
 
 const MenuItem = (props) => {
+  const { t } = useTranslation();
+
   const { title, link, depth, children, open: openProp, ...rest } = props;
 
   const [open, setOpen] = useState(openProp);
@@ -39,7 +42,7 @@ const MenuItem = (props) => {
           depth={depth}
           onClick={handleToggle}
         >
-          <span>{title}</span>
+          <span>{t(title)}</span>
           {open ? (
             <ExpandLess color="inherit" />
           ) : (
@@ -62,7 +65,7 @@ const MenuItem = (props) => {
         to={link}
         depth={depth}
       >
-        <span>{title}</span>
+        <span>{t(title)}</span>
       </WrapperButton>
     </ListItem>
   );
