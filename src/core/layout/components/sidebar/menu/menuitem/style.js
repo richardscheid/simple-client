@@ -21,7 +21,6 @@ export const MenuButton = styled(CoreButton)`
   width: 100%;
   font-weight: normal;
   transition: var(--transition-base);
-  color: var(--blue);
   white-space: nowrap;
 
   padding-left: ${(props) => (props.depth > 0 ? (16 + 20) * props.depth : 22)};
@@ -41,13 +40,11 @@ export const WrapperButton = styled(CoreButton)`
   border-radius: 3px;
   transition: var(--transition-base);
   font-weight: normal;
+  font-size: 14px;
 
   &.depth-0 {
     font-weight: 500;
   }
-
-  font-size: 14px;
-  color: $blue;
 
   &.active,
   &:hover {
