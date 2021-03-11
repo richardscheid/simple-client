@@ -16,7 +16,7 @@ export default [
               ]
           },
           {
-              "title":"menu.registers",
+              "title":"menu.register",
               "enable":"true",
               "content":[
                   {
