@@ -9,5 +9,20 @@
     "email": "Correo electrónico",
     "password": "Contraseña",
     "forgot": "Olvidé la contraseña"
+  },
+  "menu": {
+    "title:": "Menu",
+    "register": "Cadastros",
+    "dashboard": {
+      "title": "Dashboard"
+    },
+    "user": {
+      "title": "Usuários",
+      "description": "Cadastro de Usuários"
+    },
+    "category": {
+      "title": "Categorias",
+      "description": "Cadastro de Categorias"
+    }
   }
 }
