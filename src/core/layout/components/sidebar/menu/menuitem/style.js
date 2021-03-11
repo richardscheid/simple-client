@@ -65,9 +65,3 @@ export const ExpandLessRotate = styled(ExpandLess)`
   opacity: 0.9;
   transform: rotate(180deg);
 `;
-
-export const LabelItem = styled.span`
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-`;

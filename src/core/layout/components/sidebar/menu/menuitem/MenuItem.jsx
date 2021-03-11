@@ -11,7 +11,6 @@ import {
   WrapperButton,
   MenuButton,
   ListItem,
-  LabelItem,
 } from './style';
 
 const CustomRouterLink = forwardRef(function CustomLink(props, ref) {
