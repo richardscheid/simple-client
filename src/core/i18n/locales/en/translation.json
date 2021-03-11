@@ -9,5 +9,20 @@
     "email": "E-mail",
     "password": "Password",
     "forgot": "Forgot password"
+  },
+  "menu": {
+    "title:": "Menu",
+    "register": "Registers",
+    "dashboard": {
+      "title": "Dashboard"
+    },
+    "user": {
+      "title": "Users",
+      "description": "Register of Users"
+    },
+    "category": {
+      "title": "Categories",
+      "description": "Register of Categories"
+    }
   }
 }
