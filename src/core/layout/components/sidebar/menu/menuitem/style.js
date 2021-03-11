@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import {
   ListItem as CoreListItem,
   Button as CoreButton,
@@ -22,10 +22,15 @@ export const MenuButton = styled(CoreButton)`
   font-weight: normal;
   transition: var(--transition-base);
   white-space: nowrap;
-
   padding-left: ${(props) => (props.depth > 0 ? (16 + 20) * props.depth : 22)};
 
-  &.active,
+  ${({ active }) =>
+    active &&
+    css`
+      color: var(--primary);
+      background: #eeeff8;
+    `}
+
   &:hover {
     color: var(--primary);
     background: #eeeff8;
@@ -46,7 +51,6 @@ export const WrapperButton = styled(CoreButton)`
     font-weight: 500;
   }
 
-  &.active,
   &:hover {
     background: none;
     color: var(--primary);
