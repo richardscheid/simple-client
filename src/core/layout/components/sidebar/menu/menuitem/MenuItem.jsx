@@ -35,11 +35,7 @@ const MenuItem = (props) => {
   if (children) {
     return (
       <ListItem {...rest} disableGutters>
-        <MenuButton
-          // active={open}
-          depth={depth}
-          onClick={handleToggle}
-        >
+        <MenuButton active={open} depth={depth} onClick={handleToggle}>
           <span>{t(title)}</span>
           {open ? (
             <ExpandLess color="inherit" />
