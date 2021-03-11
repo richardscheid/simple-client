@@ -1,9 +1,9 @@
 import styled, { css } from 'styled-components';
+import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import {
   ListItem as CoreListItem,
   Button as CoreButton,
 } from '@material-ui/core';
-import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 
 export const ListItem = styled(CoreListItem)`
   display: block;
