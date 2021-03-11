@@ -36,7 +36,6 @@ const MenuItem = (props) => {
     return (
       <ListItem {...rest} disableGutters>
         <MenuButton
-          color="primary"
           // active={open}
           depth={depth}
           onClick={handleToggle}
@@ -55,8 +54,6 @@ const MenuItem = (props) => {
   return (
     <ListItem {...rest} disableGutters>
       <WrapperButton
-        activeClassName="active-item"
-        color="primary"
         disableRipple
         variant="text"
         component={CustomRouterLink}
