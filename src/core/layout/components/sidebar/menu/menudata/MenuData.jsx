@@ -10,6 +10,23 @@ const MenuData = (props) => {
   const { items, page, depth, location } = props;
 
   if (page.content) {
+    items.push(
+      <MenuItem
+        depth={depth}
+        link={page.to}
+        key={page.title}
+        title={page.title}
+      >
+        <StyledMenuList>
+          <MenuList
+            depth={depth + 1}
+            pages={page.content}
+            location={location}
+          />
+        </StyledMenuList>
+      </MenuItem>
+    );
+  } else {
     const open = matchPath(location.pathname, {
       path: page.to,
       exact: false,
@@ -22,23 +39,6 @@ const MenuData = (props) => {
         key={page.title}
         title={page.title}
         open={Boolean(open)}
-      >
-        <StyledMenuList>
-          <MenuList
-            depth={depth + 1}
-            pages={page.content}
-            location={location}
-          />
-        </StyledMenuList>
-      </MenuItem>
-    );
-  } else {
-    items.push(
-      <MenuItem
-        depth={depth}
-        link={page.to}
-        key={page.title}
-        title={page.title}
       />
     );
   }
