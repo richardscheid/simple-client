@@ -22,11 +22,11 @@ const CustomRouterLink = forwardRef(function CustomLink(props, ref) {
 });
 
 const MenuItem = (props) => {
-  const { t } = useTranslation();
-
   const { title, link, depth, children, open: openProp, ...rest } = props;
 
   const [open, setOpen] = useState(openProp);
+
+  const { t } = useTranslation();
 
   const handleToggle = () => {
     setOpen(!open);
