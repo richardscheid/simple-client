@@ -16,3 +16,18 @@ export const PaperContainer = styled(CorePaper)`
     padding-right: 14px;
   }
 `;
+
+export const PaperHeading = styled(PaperContainer)`
+  padding-right: (14px);
+
+  @include media-breakpoint-down(md) {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+  }
+`;
