@@ -31,3 +31,10 @@ export const PaperHeading = styled(PaperContainer)`
     margin: 0;
   }
 `;
+
+export const PaperDescription = styled(PaperContainer)`
+  margin: (var(--scaper) / 2) 0 0;
+  font-size: var(--font-size-base) * 1.1;
+  opacity: 0.6;
+  font-weight: normal;
+`;
