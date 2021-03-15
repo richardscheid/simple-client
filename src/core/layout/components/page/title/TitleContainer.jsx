@@ -7,7 +7,7 @@ const TitleContainer = (props) => {
   const { title, description } = props;
   return (
     <>
-      <PaperContainer>
+      <PaperContainer square elevation={2}>
         <PaperHeading>
           <Title>{title}</Title>
           <PaperDescription>{description}</PaperDescription>
