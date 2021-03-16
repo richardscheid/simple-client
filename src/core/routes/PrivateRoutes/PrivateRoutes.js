@@ -3,7 +3,7 @@ import { Switch, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Layout } from '../../layout';
 
-import { Dashboard } from '../../../pages';
+import { Dashboard, User } from '../../../pages';
 
 const PrivateRoutes = () => {
   const location = useLocation();
@@ -50,6 +50,10 @@ const PrivateRoutes = () => {
               >
                 <Route path="/dashboard">
                   <Dashboard />
+                </Route>
+
+                <Route path="/users">
+                  <User />
                 </Route>
               </motion.div>
             </Switch>
