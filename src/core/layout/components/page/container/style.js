@@ -1,8 +1,8 @@
+import styled from 'styled-components';
 import {
   Card as CoreCard,
   CardContent as CoreContent,
 } from '@material-ui/core';
-import styled from 'styled-components';
 
 export const Card = styled(CoreCard)`
   margin-bottom: 4px;
