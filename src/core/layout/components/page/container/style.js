@@ -4,6 +4,11 @@ import {
 } from '@material-ui/core';
 import styled from 'styled-components';
 
+export const Card = styled(CoreCard)`
+  margin-bottom: 4px;
+  overflow: visible;
+`;
+
 export const CardContent = styled(CoreContent)`
   padding: 3px;
 `;
