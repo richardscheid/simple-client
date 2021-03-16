@@ -26,13 +26,6 @@ export const PaperHeading = styled(PaperContainer)`
   }
 `;
 
-export const PaperDescription = styled(PaperContainer)`
-  margin: (var(--scaper) / 2) 0 0;
-  font-size: var(--font-size-base) * 1.1;
-  opacity: 0.6;
-  font-weight: normal;
-`;
-
 export const Title = styled.h1`
   h1 {
     font-size: 2rem;
