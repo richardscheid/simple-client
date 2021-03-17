@@ -20,6 +20,10 @@ export const BoxHeader = styled(CoreBox)`
   justify-content: space-between;
   padding-left: var(--spacer);
   padding-right: var(--spacer);
+
+  @media screen and (min-width: 1200px) {
+    justify-content: flex-end;
+  }
 `;
 
 export const BoxMenu = styled(CoreBox)`
