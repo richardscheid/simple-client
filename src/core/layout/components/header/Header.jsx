@@ -29,14 +29,14 @@ const Header = (props) => {
       >
         {!isCollapsedLayout && <HeaderLogo />}
         <BoxHeader>
-          <Hidden>
+          <Hidden lgUp>
             <BoxLogo title="Simple Corp">
-              <Hidden smUp>
-                <LinkHeader to="/dashboard">
-                  <IconButtonHeader color="primary" size="medium">
-                    <ImageHeader src={logo} alt="Project logo" />
-                  </IconButtonHeader>
-                </LinkHeader>
+              <LinkHeader to="/dashboard">
+                <IconButtonHeader color="primary" size="medium">
+                  <ImageHeader src={logo} alt="Project logo" />
+                </IconButtonHeader>
+              </LinkHeader>
+              <Hidden smDown>
                 <BoxText>Simple Header</BoxText>
               </Hidden>
             </BoxLogo>
@@ -57,7 +57,7 @@ Header.propTypes = {
 };
 
 Header.defaultProps = {
-  headerFixed: true,
+  headerFixed: false,
   headerShadow: false,
   isCollapsedLayout: false,
 };
