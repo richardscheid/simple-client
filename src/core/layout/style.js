@@ -10,6 +10,12 @@ export const LayoutContainer = styled.div`
 export const LayoutWrapper = styled.div`
   position: relative;
   min-height: 100vh;
+
+  ${({ fixedMenu }) =>
+    fixedMenu &&
+    css`
+      display: flex;
+    `}
 `;
 
 export const LayoutContent = styled.div`
@@ -27,24 +33,20 @@ export const LayoutContent = styled.div`
       height: auto;
     `}
 
-  ${({ sidebarFixed }) =>
-    sidebarFixed &&
+  ${({ fixedMenu }) =>
+    fixedMenu &&
     css`
       height: 100vh;
-
-      @include media-breakpoint-up(lg) {
-        padding-left: var(--sidebar-width);
-      }
     `}
 `;
 
-export const InnerContent = styled(LayoutContent)`
+export const InnerContent = styled.div`
   padding: var(--layout-spacer) var(--layout-spacer) (var(--layout-spacer) / 2);
   display: flex;
   flex: 1;
 `;
 
-export const WrapperContent = styled(InnerContent)`
+export const WrapperContent = styled.div`
   display: block;
   width: 100%;
 `;
