@@ -11,16 +11,16 @@ import {
 } from './style';
 
 const Layout = (props) => {
-  const { children, sidebarFixed, footerFixed } = props;
+  const { children, fixedMenu, footerFixed } = props;
 
   return (
     <>
       <LayoutContainer>
         <Header />
 
-        <LayoutWrapper>
+        <LayoutWrapper fixedMenu={fixedMenu}>
           <Sidebar />
-          <LayoutContent sidebarFixed={sidebarFixed} footerFixed={footerFixed}>
+          <LayoutContent fixedMenu={fixedMenu} footerFixed={footerFixed}>
             <InnerContent>
               <WrapperContent>{children}</WrapperContent>
             </InnerContent>
@@ -33,15 +33,15 @@ const Layout = (props) => {
 };
 
 Layout.propTypes = {
-  children: PropTypes.node,
-  sidebarFixed: PropTypes.bool,
   footerFixed: PropTypes.bool,
+  fixedMenu: PropTypes.bool,
+  children: PropTypes.node,
 };
 
 Layout.defaultProps = {
-  children: null,
-  sidebarFixed: true,
   footerFixed: false,
+  fixedMenu: true,
+  children: null,
 };
 
 export { Layout };
