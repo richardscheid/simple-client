@@ -1,16 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { PaperContainer, PaperHeading, Title } from './style';
+import { PaperContainer, Title } from './style';
 
 const TitleContainer = (props) => {
   const { title } = props;
   return (
     <>
       <PaperContainer square elevation={2}>
-        <PaperHeading>
-          <Title>{title}</Title>
-        </PaperHeading>
+        <Title>{title}</Title>
       </PaperContainer>
     </>
   );
