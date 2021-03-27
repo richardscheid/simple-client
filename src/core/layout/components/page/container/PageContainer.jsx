@@ -1,15 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card, CardContent } from './style';
+import { Container } from './style';
 
 const PageContainer = (props) => {
   const { children } = props;
 
-  return (
-    <Card>
-      <CardContent>{children}</CardContent>
-    </Card>
-  );
+  return <Container>{children}</Container>;
 };
 
 PageContainer.propTypes = {
