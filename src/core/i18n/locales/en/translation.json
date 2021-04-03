@@ -6,6 +6,7 @@
     "signin": "Sign In"
   },
   "terms": {
+    "user": "User",
     "email": "E-mail",
     "password": "Password",
     "forgot": "Forgot password"
