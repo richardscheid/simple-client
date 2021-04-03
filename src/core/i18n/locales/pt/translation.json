@@ -6,6 +6,7 @@
     "signin": "Entrar"
   },
   "terms": {
+    "user": "Usuário",
     "email": "E-mail",
     "password": "Senha",
     "forgot": "Esqueci a senha"
