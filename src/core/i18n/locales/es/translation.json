@@ -6,6 +6,7 @@
     "signin": "Iniciar"
   },
   "terms": {
+    "user": "Usuário",
     "email": "Correo electrónico",
     "password": "Contraseña",
     "forgot": "Olvidé la contraseña"
