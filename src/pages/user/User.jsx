@@ -15,12 +15,6 @@ import { Input } from '../../components';
 import HttpClient from '../../core/http/HttpClient';
 import HttpRequest from '../../core/http/request/HttpRequest';
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
-}
-
-const rows = [createData('Richard Scheid', 'email', 'Sim')];
-
 const User = () => {
   const { t } = useTranslation();
   const [users, setUsers] = useState('');
@@ -28,7 +22,7 @@ const User = () => {
   useEffect(() => {
     async function loadUsers() {
       const response = await HttpClient.request(
-        HttpRequest({ url: '/users', method: 'get' })
+        new HttpRequest({ url: '/users', method: 'get' })
       );
       setUsers(response.data);
     }
